@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeros Pasos: Define los 3 Pilares de tu Marca</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Orbitron:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f8fafc;
+        }
+        h1, h2, h3 {
+            font-family: 'Orbitron', sans-serif;
+        }
+        .subtitle {
+            font-family: 'Montserrat', sans-serif;
+        }
+        .brand-gradient-text {
+            background: linear-gradient(to right, #007BFF, #9D4EDD);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+        }
+        textarea {
+            transition: all 0.3s ease;
+        }
+        textarea:focus {
+            border-color: #9D4EDD;
+            box-shadow: 0 0 0 3px rgba(157, 78, 221, 0.2);
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 300px;
+            max-height: 400px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 400px;
+            }
+        }
+    </style>
+</head>
+<body class="text-slate-700">
+
+    <header class="bg-white/80 backdrop-blur-lg sticky top-0 z-50 shadow-sm">
+        <nav class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex-shrink-0">
+                    <a href="#" class="text-2xl font-bold brand-gradient-text" style="font-family: 'Orbitron', sans-serif;">InitNullTV</a>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="#intro" class="text-slate-600 hover:text-[#007BFF] px-3 py-2 rounded-md text-sm font-medium">Introducción</a>
+                        <a href="#workshop" class="text-slate-600 hover:text-[#007BFF] px-3 py-2 rounded-md text-sm font-medium">Taller de Pilares</a>
+                        <a href="#summary" class="text-slate-600 hover:text-[#007BFF] px-3 py-2 rounded-md text-sm font-medium">Tu Resumen</a>
+                        <a href="#next-steps" class="text-slate-600 hover:text-[#007BFF] px-3 py-2 rounded-md text-sm font-medium">Próximos Pasos</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="intro" class="py-16 sm:py-20">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-slate-800">Primeros Pasos en tu Negocio Digital</h1>
+                <p class="mt-4 text-lg sm:text-xl subtitle text-slate-600">Guía Práctica para Definir los <span class="brand-gradient-text font-bold">3 Pilares de tu Marca</span></p>
+                <div class="max-w-3xl mx-auto mt-8 text-base text-slate-600 space-y-4">
+                    <p>Sé cómo te sientes. Tienes una idea, la motivación a tope, pero te ahogas en un mar de dudas: ¿Qué nombre le pongo? ¿Qué colores uso? ¿Cómo diseño el logo perfecto? La <strong class="text-[#9D4EDD]">parálisis por análisis</strong> es real.</p>
+                    <p>Ese es el error que nos paraliza a todos: empezamos por el tejado. Nos obsesionamos con lo visual antes de construir los <strong class="text-[#007BFF]">cimientos</strong>.</p>
+                    <p>Esta no es una guía teórica. Es tu primera hoja de ruta interactiva. Responde las preguntas que de verdad importan y consigue la claridad que necesitas para generar tu <strong class="brand-gradient-text">primer pago online</strong>.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="workshop" class="py-16 sm:py-20 bg-slate-100">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl sm:text-4xl font-bold text-slate-800">Taller de Pilares de Marca</h2>
+                    <p class="mt-3 max-w-2xl mx-auto text-md text-slate-600">Completa cada sección para construir los cimientos de tu negocio. Tus respuestas se guardarán y actualizarán tu resumen en tiempo real.</p>
+                </div>
+
+                <div class="space-y-12">
+                    
+                    <div class="bg-white p-6 sm:p-8 rounded-xl shadow-md border border-slate-200">
+                        <h3 class="text-2xl font-bold text-slate-800"><span class="text-[#007BFF]">PILAR 1:</span> Define a tu Tribu</h3>
+                        <p class="mt-2 text-slate-600">Si le hablas a todo el mundo, no le conectas a nadie. Tu primer pago llegará cuando resuelvas un problema real para una persona específica.</p>
+                        <div class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="tribu-frustracion" class="block text-sm font-medium text-slate-700">1. ¿Cuál es la frustración #1 que les quita el sueño?</label>
+                                <textarea id="tribu-frustracion" rows="4" class="mt-1 block w-full rounded-md border-slate-300 shadow-sm focus:ring-2 p-3" placeholder="Ej: Se sienten estancados en un trabajo que no les llena y no saben por dónde empezar online sin perder sus ahorros..."></textarea>
+                            </div>
+                            <div>
+                                <label for="tribu-resultado" class="block text-sm font-medium text-slate-700">2. ¿Qué resultado final desean más que nada?</label>
+                                <textarea id="tribu-resultado" rows="4" class="mt-1 block w-full rounded-md border-slate-300 shadow-sm focus:ring-2 p-3" placeholder="Ej: Alcanzar la libertad de manejar su tiempo, comprobando que el emprendimiento digital es real para ellos..."></textarea>
+                            </div>
+                            <div class="md:col-span-2">
+                                <label for="tribu-intentos" class="block text-sm font-medium text-slate-700">3. ¿Qué han intentado antes que no les ha funcionado?</label>
+                                <textarea id="tribu-intentos" rows="3" class="mt-1 block w-full rounded-md border-slate-300 shadow-sm focus:ring-2 p-3" placeholder="Ej: Compraron un curso lleno de tecnicismos que nunca aplicaron..."></textarea>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-6 sm:p-8 rounded-xl shadow-md border border-slate-200">
+                        <h3 class="text-2xl font-bold text-slate-800"><span class="text-[#9D4EDD]">PILAR 2:</span> Articula tu Promesa</h3>
+                        <p class="mt-2 text-slate-600">La gente no compra productos, compra una transformación. Tu marca es el puente del Punto A (dolor) al Punto B (éxito).</p>
+                        <div class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="promesa-antes" class="block text-sm font-medium text-slate-700">1. ¿Cómo se siente tu tribu ANTES de tu ayuda? (Punto A)</label>
+                                <textarea id="promesa-antes" rows="4" class="mt-1 block w-full rounded-md border-slate-300 shadow-sm focus:ring-2 p-3" placeholder="Ej: Confundido, abrumado, inseguro, con miedo al fracaso..."></textarea>
+                            </div>
+                            <div>
+                                <label for="promesa-despues" class="block text-sm font-medium text-slate-700">2. ¿Cómo se sentirá DESPUÉS de tu ayuda? (Punto B)</label>
+                                <textarea id="promesa-despues" rows="4" class="mt-1 block w-full rounded-md border-slate-300 shadow-sm focus:ring-2 p-3" placeholder="Ej: Con claridad, empoderado, con un plan paso a paso, con la prueba de su primer pago..."></textarea>
+                            </div>
+                            <div class="md:col-span-2">
+                                <label for="promesa-unica" class="block text-sm font-medium text-slate-700">3. Mi Única Promesa de Transformación es:</label>
+                                <textarea id="promesa-unica" rows="3" class="mt-1 block w-full rounded-md border-slate-300 shadow-sm focus:ring-2 p-3" placeholder="Ej: Ayudo a emprendedores principiantes a pasar de la parálisis a generar su primer ingreso digital replicable en 30 días."></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white p-6 sm:p-8 rounded-xl shadow-md border border-slate-200">
+                        <h3 class="text-2xl font-bold text-slate-800"><span class="brand-gradient-text">PILAR 3:</span> Encuentra tu Porqué</h3>
+                        <p class="mt-2 text-slate-600">En un mundo lleno de ruido, tu historia te hace único. La gente conecta con gente. La transparencia vende más que la perfección.</p>
+                        <div class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="porque-experiencia" class="block text-sm font-medium text-slate-700">1. ¿Qué experiencia personal o error te conecta con tu tribu?</label>
+                                <textarea id="porque-experiencia" rows="4" class="mt-1 block w-full rounded-md border-slate-300 shadow-sm focus:ring-2 p-3" placeholder="Ej: Perdí dinero intentando un método popular sin un plan, por eso mi enfoque es de bajo riesgo..."></textarea>
+                            </div>
+                            <div>
+                                <label for="porque-valor" class="block text-sm font-medium text-slate-700">2. ¿Qué valor es absolutamente innegociable para ti?</label>
+                                <textarea id="porque-valor" rows="4" class="mt-1 block w-full rounded-md border-slate-300 shadow-sm focus:ring-2 p-3" placeholder="Ej: La Transparencia Radical. Muestro las métricas reales, tanto los aciertos como los errores..."></textarea>
+                            </div>
+                            <div class="md:col-span-2">
+                                <label for="porque-mision" class="block text-sm font-medium text-slate-700">3. ¿Por qué te importa que tu tribu tenga éxito?</label>
+                                <textarea id="porque-mision" rows="3" class="mt-1 block w-full rounded-md border-slate-300 shadow-sm focus:ring-2 p-3" placeholder="Ej: Porque quiero demostrar que la independencia económica es posible para cualquiera con un plan claro..."></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="summary" class="py-16 sm:py-20">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl sm:text-4xl font-bold text-slate-800">Tu Resumen de Marca</h2>
+                    <p class="mt-3 max-w-2xl mx-auto text-md text-slate-600">¡Felicidades! Aquí tienes los cimientos de tu marca en una sola vista. Este es el resultado de tu trabajo estratégico.</p>
+                </div>
+                <div class="grid grid-cols-1 lg:grid-cols-5 gap-8 items-start">
+                    <div class="lg:col-span-3 bg-white p-6 sm:p-8 rounded-xl shadow-lg border border-slate-200 space-y-8">
+                        <div>
+                            <h4 class="text-lg font-bold text-[#007BFF]">MI TRIBU</h4>
+                            <p class="mt-2 text-slate-600">Ayudo a personas que se sienten frustradas por <strong id="summary-tribu-frustracion" class="font-semibold text-slate-800">[su frustración principal]</strong>. Han intentado sin éxito <strong id="summary-tribu-intentos" class="font-semibold text-slate-800">[soluciones anteriores]</strong>. Su mayor deseo es <strong id="summary-tribu-resultado" class="font-semibold text-slate-800">[su resultado deseado]</strong>.</p>
+                        </div>
+                        <hr>
+                        <div>
+                            <h4 class="text-lg font-bold text-[#9D4EDD]">MI PROMESA DE TRANSFORMACIÓN</h4>
+                            <p class="mt-2 text-slate-600">Actualmente se sienten <strong id="summary-promesa-antes" class="font-semibold text-slate-800">[sentimiento 'antes']</strong>, y yo les ayudo a sentirse <strong id="summary-promesa-despues" class="font-semibold text-slate-800">[sentimiento 'después']</strong>.</p>
+                            <div class="mt-4 p-4 bg-slate-100 rounded-lg">
+                                <p class="text-center font-bold text-slate-800 italic">"<span id="summary-promesa-unica">[Mi promesa única de transformación]</span>"</p>
+                            </div>
+                        </div>
+                        <hr>
+                        <div>
+                            <h4 class="text-lg font-bold brand-gradient-text">MI PORQUÉ (LO QUE ME HACE ÚNICO)</h4>
+                            <p class="mt-2 text-slate-600">Mi historia personal que me conecta con ellos es que <strong id="summary-porque-experiencia" class="font-semibold text-slate-800">[mi experiencia personal]</strong>. Mi valor innegociable es <strong id="summary-porque-valor" class="font-semibold text-slate-800">[mi valor principal]</strong>, y mi misión es <strong id="summary-porque-mision" class="font-semibold text-slate-800">[mi misión y propósito]</strong>.</p>
+                        </div>
+                    </div>
+                    <div class="lg:col-span-2 p-6 bg-white rounded-xl shadow-lg border border-slate-200">
+                        <h4 class="text-lg font-bold text-center text-slate-800">Fortaleza de tus Pilares</h4>
+                        <p class="text-center text-sm text-slate-500 mb-4">Se actualiza mientras escribes</p>
+                        <div class="chart-container">
+                            <canvas id="pillarChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="next-steps" class="py-16 sm:py-20 bg-slate-100">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center">
+                    <h2 class="text-3xl sm:text-4xl font-bold text-slate-800">Has puesto los cimientos. ¡Ahora empieza la construcción!</h2>
+                    <p class="mt-4 max-w-2xl mx-auto text-lg text-slate-600">Esto es solo el comienzo del viaje. ¿Cuál es el siguiente paso?</p>
+                </div>
+                <div class="mt-12 max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="bg-white p-8 rounded-xl shadow-md text-center">
+                        <h3 class="text-xl font-bold text-slate-800">1. Suscríbete a InitNullTV en YouTube</h3>
+                        <p class="mt-2 text-slate-600">Allí documento en tiempo real cómo aplico estos pilares. Aprende de la acción, no de la teoría.</p>
+                        <a href="https://www.youtube.com/@InitNullTV?sub_confirmation=1" class="mt-6 inline-block bg-[#007BFF] text-white font-bold py-3 px-6 rounded-lg hover:bg-blue-700 transition-colors">SUSCRIBIRME AL CANAL</a>
+                    </div>
+                    <div class="bg-white p-8 rounded-xl shadow-md text-center">
+                        <h3 class="text-xl font-bold text-slate-800">2. Únete a nuestra Comunidad Premium</h3>
+                        <p class="mt-2 text-slate-600">Acompañamiento cercano, herramientas exclusivas y networking con otros emprendedores.</p>
+                        <a href="https://www.patreon.com/cw/InitNullTV" class="mt-6 inline-block bg-[#9D4EDD] text-white font-bold py-3 px-6 rounded-lg hover:bg-purple-700 transition-colors">UNIRME A LA COMUNIDAD</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    
+    <footer class="bg-slate-800 text-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-8 text-center">
+             <p class="text-2xl font-bold" style="font-family: 'Orbitron', sans-serif;">InitNullTV</p>
+             <p class="mt-2 text-slate-300">Aprendiendo a emprender, juntos.</p>
+             <div class="mt-4 flex justify-center space-x-6">
+                <a href="https://www.tiktok.com/@initnulltv" class="text-slate-300 hover:text-white">TikTok</a>
+                <a href="https://www.instagram.com/initnulltv/" class="text-slate-300 hover:text-white">Instagram</a>
+                <a href="https://x.com/initnulltv" class="text-slate-300 hover:text-white">X</a>
+             </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const state = {
+                tribu: { frustracion: '', resultado: '', intentos: '' },
+                promesa: { antes: '', despues: '', unica: '' },
+                porque: { experiencia: '', valor: '', mision: '' }
+            };
+
+            const targetLengths = {
+                tribu: 150,
+                promesa: 150,
+                porque: 150
+            };
+
+            const chartCtx = document.getElementById('pillarChart').getContext('2d');
+            let pillarChart;
+
+            const createChart = () => {
+                const gradientBlue = chartCtx.createLinearGradient(0, 0, 0, 300);
+                gradientBlue.addColorStop(0, 'rgba(0, 123, 255, 0.5)');
+                gradientBlue.addColorStop(1, 'rgba(0, 123, 255, 0.1)');
+                
+                const gradientPurple = chartCtx.createLinearGradient(0, 0, 0, 300);
+                gradientPurple.addColorStop(0, 'rgba(157, 78, 221, 0.5)');
+                gradientPurple.addColorStop(1, 'rgba(157, 78, 221, 0.1)');
+                
+                pillarChart = new Chart(chartCtx, {
+                    type: 'radar',
+                    data: {
+                        labels: ['Tribu', 'Promesa', 'Porqué'],
+                        datasets: [{
+                            label: 'Fortaleza del Pilar',
+                            data: [0, 0, 0],
+                            backgroundColor: gradientPurple,
+                            borderColor: '#9D4EDD',
+                            pointBackgroundColor: '#9D4EDD',
+                            pointBorderColor: '#fff',
+                            pointHoverBackgroundColor: '#fff',
+                            pointHoverBorderColor: '#9D4EDD'
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        scales: {
+                            r: {
+                                angleLines: { color: 'rgba(0, 0, 0, 0.1)' },
+                                grid: { color: 'rgba(0, 0, 0, 0.1)' },
+                                pointLabels: {
+                                    font: { size: 14, family: 'Montserrat' },
+                                    color: '#334155'
+                                },
+                                suggestedMin: 0,
+                                suggestedMax: 100,
+                                ticks: {
+                                    backdropColor: 'transparent',
+                                    stepSize: 25,
+                                    color: 'rgba(0,0,0,0.5)'
+                                }
+                            }
+                        },
+                        plugins: {
+                            legend: {
+                                display: false
+                            }
+                        }
+                    }
+                });
+            }
+
+            const updateSummary = () => {
+                document.getElementById('summary-tribu-frustracion').textContent = state.tribu.frustracion || '[su frustración principal]';
+                document.getElementById('summary-tribu-intentos').textContent = state.tribu.intentos || '[soluciones anteriores]';
+                document.getElementById('summary-tribu-resultado').textContent = state.tribu.resultado || '[su resultado deseado]';
+
+                document.getElementById('summary-promesa-antes').textContent = state.promesa.antes || `[sentimiento 'antes']`;
+                document.getElementById('summary-promesa-despues').textContent = state.promesa.despues || `[sentimiento 'después']`;
+                document.getElementById('summary-promesa-unica').textContent = state.promesa.unica || `[Mi promesa única de transformación]`;
+
+                document.getElementById('summary-porque-experiencia').textContent = state.porque.experiencia || '[mi experiencia personal]';
+                document.getElementById('summary-porque-valor').textContent = state.porque.valor || '[mi valor principal]';
+                document.getElementById('summary-porque-mision').textContent = state.porque.mision || '[mi misión y propósito]';
+            };
+
+            const calculateCompleteness = () => {
+                const tribuLength = state.tribu.frustracion.length + state.tribu.resultado.length + state.tribu.intentos.length;
+                const promesaLength = state.promesa.antes.length + state.promesa.despues.length + state.promesa.unica.length;
+                const porqueLength = state.porque.experiencia.length + state.porque.valor.length + state.porque.mision.length;
+                
+                const tribuScore = Math.min(100, (tribuLength / targetLengths.tribu) * 100);
+                const promesaScore = Math.min(100, (promesaLength / targetLengths.promesa) * 100);
+                const porqueScore = Math.min(100, (porqueLength / targetLengths.porque) * 100);
+
+                return [tribuScore, promesaScore, porqueScore];
+            };
+
+            const updateChart = () => {
+                if (!pillarChart) return;
+                pillarChart.data.datasets[0].data = calculateCompleteness();
+                pillarChart.update();
+            };
+
+            const setupEventListeners = () => {
+                const inputs = [
+                    { id: 'tribu-frustracion', pillar: 'tribu', field: 'frustracion' },
+                    { id: 'tribu-resultado', pillar: 'tribu', field: 'resultado' },
+                    { id: 'tribu-intentos', pillar: 'tribu', field: 'intentos' },
+                    { id: 'promesa-antes', pillar: 'promesa', field: 'antes' },
+                    { id: 'promesa-despues', pillar: 'promesa', field: 'despues' },
+                    { id: 'promesa-unica', pillar: 'promesa', field: 'unica' },
+                    { id: 'porque-experiencia', pillar: 'porque', field: 'experiencia' },
+                    { id: 'porque-valor', pillar: 'porque', field: 'valor' },
+                    { id: 'porque-mision', pillar: 'porque', field: 'mision' }
+                ];
+
+                inputs.forEach(input => {
+                    const element = document.getElementById(input.id);
+                    if(element) {
+                        element.addEventListener('input', (e) => {
+                            state[input.pillar][input.field] = e.target.value;
+                            updateSummary();
+                            updateChart();
+                        });
+                    }
+                });
+            };
+
+            createChart();
+            setupEventListeners();
+            updateSummary();
+        });
+    </script>
+</body>
+</html>
