@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InitNullTV - Aprendiendo a emprender, juntos</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Orbitron:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f8fafc;
+            color: #1e293b;
+        }
+        h1, h2, h3, .logo-text {
+            font-family: 'Orbitron', sans-serif;
+        }
+        .subtitle {
+            font-family: 'Montserrat', sans-serif;
+        }
+        .brand-gradient-text {
+            background: linear-gradient(to right, #007BFF, #9D4EDD);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+        }
+        .bg-gradient-blue-purple {
+            background: linear-gradient(to right, #007BFF, #9D4EDD);
+        }
+        .brand-shadow {
+            box-shadow: 0 4px 6px -1px rgba(0, 123, 255, 0.1), 0 2px 4px -2px rgba(157, 78, 221, 0.1);
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 350px;
+            max-height: 450px;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="bg-slate-900/95 backdrop-blur-lg sticky top-0 z-50 shadow-lg">
+        <nav class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex-shrink-0">
+                    <a href="#" class="text-3xl font-bold logo-text brand-gradient-text">InitNullTV</a>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <a href="#mision" class="text-slate-300 hover:text-[#007BFF] px-3 py-2 rounded-md text-sm font-medium transition-colors">Misión</a>
+                    <a href="#ecosistema" class="text-slate-300 hover:text-[#007BFF] px-3 py-2 rounded-md text-sm font-medium transition-colors">Ecosistema</a>
+                    <a href="#patreon" class="text-slate-300 hover:text-[#007BFF] px-3 py-2 rounded-md text-sm font-medium transition-colors">Comunidad</a>
+                    <a href="https://www.initnulltv.com" target="_blank" class="bg-[#9D4EDD] text-white hover:bg-[#863ec3] py-2 px-4 rounded-lg text-sm font-medium transition-colors shadow-md">Web Principal</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        
+        <!-- Hero Section - Dark BG -->
+        <section id="hero" class="bg-[#0D0D0D] text-white py-24 sm:py-32">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h1 class="text-4xl sm:text-6xl md:text-7xl font-extrabold tracking-tight">
+                    <span class="logo-text">DE <span class="text-[#00FF99]">CERO</span> A LA </span>
+                    <span class="brand-gradient-text">RENTABILIDAD DIGITAL</span>
+                </h1>
+                <p class="mt-6 text-lg sm:text-2xl subtitle text-slate-300">
+                    "Aprendiendo a emprender, juntos."
+                </p>
+                <div class="max-w-4xl mx-auto mt-10 text-base sm:text-lg text-slate-400 space-y-4">
+                    <p>🌐 InitNullTV es el canal donde documentamos en tiempo real cómo construir un <b>negocio digital desde cero</b>, con transparencia, errores incluidos y aprendizajes que puedes aplicar hoy.</p>
+                </div>
+                <div class="mt-12 space-y-4 sm:space-y-0 sm:space-x-6">
+                    <a href="https://www.youtube.com/@InitNullTV?sub_confirmation=1" target="_blank" class="inline-flex items-center justify-center bg-[#007BFF] text-white font-bold py-3 px-8 rounded-xl hover:bg-blue-700 transition-all shadow-xl brand-shadow text-lg">
+                        <span style="font-size: 1.5em; line-height: 0.8em; margin-right: 8px;">&#x25B6;</span> Suscríbete en YouTube
+                    </a>
+                    <a href="https://www.initnulltv.com" target="_blank" class="inline-flex items-center justify-center bg-[#9D4EDD] text-white font-bold py-3 px-8 rounded-xl hover:bg-purple-700 transition-all shadow-xl brand-shadow text-lg">
+                        IR A INITNULLTV.COM
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Nuevo Banner de Redirección y Acceso a Herramientas -->
+        <section class="bg-slate-800 text-white py-6">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center md:flex md:justify-between md:items-center">
+                <p class="text-sm sm:text-lg text-slate-300 mb-3 md:mb-0">
+                    Este sitio es el repositorio de herramientas (<span class="text-[#00FF99]">GitHub Pages</span>). Para contenido principal, visita:
+                </p>
+                <div class="space-y-2 sm:space-y-0 sm:space-x-4 flex flex-col sm:flex-row justify-center items-center">
+                    <a href="https://www.initnulltv.com" target="_blank" class="text-sm font-bold text-[#007BFF] hover:text-[#9D4EDD] transition-colors underline">
+                        www.initnulltv.com
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mision and Values Section -->
+        <section id="mision" class="py-16 sm:py-24 bg-white">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl sm:text-4xl font-bold text-slate-800 logo-text">Nuestra Misión y Valores</h2>
+                    <p class="mt-4 max-w-2xl mx-auto text-lg text-slate-600 subtitle">Empoderar a principiantes compartiendo el proceso en tiempo real, con aprendizajes accionables y replicables.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="p-6 bg-slate-100 rounded-xl shadow-lg border border-slate-200 text-center">
+                        <div class="text-4xl brand-gradient-text mb-4">&#x2B50;</div>
+                        <h3 class="text-xl font-bold text-slate-800 logo-text">Transparencia Radical</h3>
+                        <p class="mt-2 text-slate-600">Mostramos los logros y los errores, las métricas reales. Cero promesas vacías. Lo que ves es lo que es.</p>
+                    </div>
+                    <div class="p-6 bg-slate-100 rounded-xl shadow-lg border border-slate-200 text-center">
+                        <div class="text-4xl brand-gradient-text mb-4">&#x27A2;</div>
+                        <h3 class="text-xl font-bold text-slate-800 logo-text">Acción Práctica</h3>
+                        <p class="mt-2 text-slate-600">Priorizamos la ejecución sobre la teoría. Cada video y herramienta se enfoca en pasos claros que puedes aplicar hoy.</p>
+                    </div>
+                    <div class="p-6 bg-slate-100 rounded-xl shadow-lg border border-slate-200 text-center">
+                        <div class="text-4xl brand-gradient-text mb-4">&#x1F91D;</div>
+                        <h3 class="text-xl font-bold text-slate-800 logo-text">Empatía con Principiantes</h3>
+                        <p class="mt-2 text-slate-600">Hablamos tu idioma, sin tecnicismos innecesarios, para acortar la curva de aprendizaje en el mundo digital.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Ecosystem Section -->
+        <section id="ecosistema" class="py-16 sm:py-24 bg-slate-900 text-white">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl sm:text-4xl font-bold brand-gradient-text logo-text">Encuéntranos en tu Plataforma Favorita</h2>
+                    <p class="mt-4 max-w-2xl mx-auto text-lg text-slate-400 subtitle">Donde quiera que estés, estamos allí para documentar tu progreso y ayudarte a crecer.</p>
+                </div>
+
+                <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-6">
+                    <a href="https://www.youtube.com/@InitNullTV?sub_confirmation=1" class="p-4 bg-slate-800 rounded-xl hover:bg-slate-700 transition-colors text-center shadow-lg border border-[#007BFF]/30">
+                        <span class="text-3xl text-[#007BFF]">&#x25B6;</span>
+                        <h3 class="mt-2 text-md font-semibold">YouTube (Hub Principal)</h3>
+                        <p class="text-xs text-slate-400">Videos largos y mini-documentales.</p>
+                    </a>
+                    <a href="https://www.tiktok.com/@initnulltv" class="p-4 bg-slate-800 rounded-xl hover:bg-slate-700 transition-colors text-center shadow-lg border border-[#9D4EDD]/30">
+                        <span class="text-3xl text-[#9D4EDD]">&#x1F4F1;</span>
+                        <h3 class="mt-2 text-md font-semibold">TikTok (Alcance)</h3>
+                        <p class="text-xs text-slate-400">Microclips de <60s para tips rápidos.</p>
+                    </a>
+                    <a href="https://www.instagram.com/initnulltv/" class="p-4 bg-slate-800 rounded-xl hover:bg-slate-700 transition-colors text-center shadow-lg border border-[#007BFF]/30">
+                        <span class="text-3xl text-[#007BFF]">&#x1F4F8;</span>
+                        <h3 class="mt-2 text-md font-semibold">Instagram (Branding)</h3>
+                        <p class="text-xs text-slate-400">Reels, carruseles y conexión personal.</p>
+                    </a>
+                    <a href="https://www.patreon.com/cw/InitNullTV" class="p-4 bg-slate-800 rounded-xl hover:bg-slate-700 transition-colors text-center shadow-lg border border-[#9D4EDD]/30">
+                        <span class="text-3xl text-[#9D4EDD]">&#x270F;</span>
+                        <h3 class="mt-2 text-md font-semibold">Patreon (Comunidad)</h3>
+                        <p class="text-xs text-slate-400">Contenido exclusivo y herramientas premium.</p>
+                    </a>
+                    <a href="https://discord.gg/Jg6aGhcnU6" class="p-4 bg-slate-800 rounded-xl hover:bg-slate-700 transition-colors text-center shadow-lg border border-[#007BFF]/30">
+                        <span class="text-3xl text-[#007BFF]">&#x1F4E9;</span>
+                        <h3 class="mt-2 text-md font-semibold">Discord (Soporte)</h3>
+                        <p class="text-xs text-slate-400">Acceso a canales privados y soporte.</p>
+                    </a>
+                    <a href="https://initnulltv.github.io" class="p-4 bg-slate-800 rounded-xl hover:bg-slate-700 transition-colors text-center shadow-lg border border-[#9D4EDD]/30">
+                        <span class="text-3xl text-[#9D4EDD]">&#x1F4BB;</span>
+                        <h3 class="mt-2 text-md font-semibold">GitHub (Recursos)</h3>
+                        <p class="text-xs text-slate-400">Scripts y documentación técnica.</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Patreon & Community Section - Interactive Chart -->
+        <section id="patreon" class="py-16 sm:py-24 bg-white">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl sm:text-4xl font-bold text-slate-800 logo-text">Comunidad Premium: Planes de Patreon</h2>
+                    <p class="mt-4 max-w-3xl mx-auto text-lg text-slate-600 subtitle">Los planes están diseñados para acompañarte en tu nivel de acción. Explora el valor que obtienes en cada nivel.</p>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <div class="p-6 bg-slate-100 rounded-xl shadow-xl border border-slate-200">
+                        <div class="flex justify-center mb-6">
+                            <button id="toggle-chart" class="bg-gradient-blue-purple text-white font-bold py-2 px-6 rounded-full shadow-lg hover:opacity-90 transition-opacity">
+                                Mostrar Valor (vs. Costo)
+                            </button>
+                        </div>
+                        <div class="chart-container">
+                            <canvas id="patreonChart"></canvas>
+                        </div>
+                        <p class="mt-4 text-center text-sm text-slate-500">Haz clic en el botón para alternar entre la vista de Valor (Beneficios) y Costo de los planes Explorer, Builder y Catalyst.</p>
+                    </div>
+
+                    <div class="space-y-6">
+                        <div class="p-6 bg-white rounded-xl shadow-lg border border-slate-200">
+                            <h3 class="text-xl font-bold text-[#007BFF]">🗺️ EXPLORER ($5/mes)</h3>
+                            <p class="mt-2 text-slate-600">Participación activa: Acceso completo a Discord, scripts sin editar y votación en encuestas.</p>
+                        </div>
+                        <div class="p-6 bg-white rounded-xl shadow-lg border border-slate-200">
+                            <h3 class="text-xl font-bold text-[#9D4EDD]">🏗️ BUILDER ($15/mes)</h3>
+                            <p class="mt-2 text-slate-600">Ejecución práctica: Todo lo anterior, más un kit de herramientas Notion mensual, Q&A grupal y métricas reales.</p>
+                        </div>
+                        <div class="p-6 bg-white rounded-xl shadow-lg border border-slate-200">
+                            <h3 class="text-xl font-bold text-[#00FF99]">🚀 CATALYST ($35/mes)</h3>
+                            <p class="mt-2 text-slate-600">Aceleración con feedback: Todo lo anterior, más revisión "Stop & Fix", prioridad en Q&A y descuentos en consultoría.</p>
+                        </div>
+                        <div class="p-6 bg-white rounded-xl shadow-lg border border-slate-200">
+                            <h3 class="text-xl font-bold text-slate-800">👑 MENTOR ($100/mes)</h3>
+                            <p class="mt-2 text-slate-600">Acompañamiento estratégico: Consultoría 1:1, promoción en redes y canal privado en Discord.</p>
+                        </div>
+                        <a href="https://www.patreon.com/cw/InitNullTV" class="w-full text-center block bg-[#9D4EDD] text-white font-bold py-3 px-8 rounded-xl hover:bg-purple-700 transition-all shadow-xl mt-6">
+                            VER TODOS LOS PLANES EN PATREON
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-slate-800 text-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-8 text-center">
+             <p class="text-3xl font-bold logo-text brand-gradient-text">InitNullTV</p>
+             <p class="mt-2 text-slate-300">© 2025. Aprendiendo a emprender, juntos.</p>
+             <div class="mt-4 flex justify-center space-x-6">
+                <a href="#" class="text-slate-300 hover:text-[#007BFF] transition-colors">TikTok</a>
+                <a href="#" class="text-slate-300 hover:text-[#007BFF] transition-colors">Instagram</a>
+                <a href="#" class="text-slate-300 hover:text-[#007BFF] transition-colors">X / Twitter</a>
+                <a href="#" class="text-slate-300 hover:text-[#007BFF] transition-colors">LinkedIn</a>
+             </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+
+            const tierData = {
+                labels: ['Explorer', 'Builder', 'Catalyst'],
+                cost: [5, 15, 35],
+                benefits: [5, 7, 10]
+            };
+
+            let currentView = 'benefits'; // 'benefits' or 'cost'
+
+            const chartCtx = document.getElementById('patreonChart').getContext('2d');
+            let patreonChart;
+
+            const createChart = (data) => {
+                if (patreonChart) patreonChart.destroy();
+
+                const gradientBar = chartCtx.createLinearGradient(0, 0, 0, 300);
+                gradientBar.addColorStop(0, '#007BFF');
+                gradientBar.addColorStop(1, '#9D4EDD');
+
+                const maxScale = currentView === 'cost' ? 40 : 12;
+                const labelText = currentView === 'cost' ? 'Costo Mensual (USD)' : 'Número de Beneficios';
+
+                patreonChart = new Chart(chartCtx, {
+                    type: 'bar',
+                    data: {
+                        labels: tierData.labels,
+                        datasets: [{
+                            label: labelText,
+                            data: data,
+                            backgroundColor: [gradientBar, gradientBar, gradientBar],
+                            borderColor: ['#007BFF', '#9D4EDD', '#00FF99'],
+                            borderWidth: 1,
+                            borderRadius: 8
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        indexAxis: 'y',
+                        scales: {
+                            x: {
+                                beginAtZero: true,
+                                max: maxScale,
+                                ticks: {
+                                    color: '#475569'
+                                },
+                                title: {
+                                    display: true,
+                                    text: labelText,
+                                    color: '#475569',
+                                    font: { family: 'Montserrat' }
+                                },
+                                grid: {
+                                    color: 'rgba(0,0,0,0.1)'
+                                }
+                            },
+                            y: {
+                                ticks: {
+                                    color: '#334155',
+                                    font: { family: 'Orbitron', weight: 'bold' }
+                                },
+                                grid: {
+                                    display: false
+                                }
+                            }
+                        },
+                        plugins: {
+                            legend: {
+                                display: false
+                            },
+                            tooltip: {
+                                callbacks: {
+                                    label: function(context) {
+                                        let label = context.dataset.label || '';
+                                        if (label) {
+                                            label += ': ';
+                                        }
+                                        if (context.parsed.x !== null) {
+                                            label += currentView === 'cost' ? `$${context.parsed.x}` : context.parsed.x;
+                                        }
+                                        return label;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                });
+            };
+
+            const toggleChart = () => {
+                const button = document.getElementById('toggle-chart');
+                if (currentView === 'benefits') {
+                    currentView = 'cost';
+                    createChart(tierData.cost);
+                    button.textContent = 'Mostrar Valor (vs. Costo)';
+                } else {
+                    currentView = 'benefits';
+                    createChart(tierData.benefits);
+                    button.textContent = 'Mostrar Costo (vs. Valor)';
+                }
+            };
+
+            document.getElementById('toggle-chart').addEventListener('click', toggleChart);
+
+            createChart(tierData.benefits);
+        });
+    </script>
+</body>
+</html>
