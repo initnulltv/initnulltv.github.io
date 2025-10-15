@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Orbitron:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     
+    <link href="//cdn-images.mailchimp.com/embedcode/classic-061523.css" rel="stylesheet" type="text/css">
     <style>
         body {
             font-family: 'Roboto', sans-serif;
@@ -44,17 +45,91 @@
             height: 350px;
             max-height: 450px;
         }
+        
+        /* ESTILO NEÓN PARA CTA DE YOUTUBE */
+        .cta-neon-green {
+            background-color: #00FF99; /* Verde Neón */
+            color: #0D0D0D; /* Negro profundo para el texto */
+            font-weight: 900;
+            box-shadow: 0 0 15px #00FF99, 0 0 5px #00FF99; /* Sombra neón */
+            transition: all 0.3s ease;
+        }
+        .cta-neon-green:hover {
+            box-shadow: 0 0 25px #00FF99, 0 0 10px #00FF99;
+            opacity: 0.9;
+        }
+
+        /* INICIO: ESTILOS PERSONALIZADOS DE MAILCHIMP (Reforzados) */
+        #mc_embed_signup {
+            background-color: #0D0D0D !important; 
+            color: #E5E7EB; 
+            font: 16px 'Roboto', sans-serif; 
+            clear: left; 
+            max-width: 450px; 
+            margin: 0 auto; 
+            padding: 20px 0;
+            border-radius: 8px;
+        }
+        #mc_embed_signup h2 {
+            display: none; 
+        }
+        #mc_embed_signup form {
+            padding: 0 !important;
+        }
+        /* Título del formulario - Orbitron */
+        .form-title-orbitron {
+            font-family: 'Orbitron', sans-serif;
+        }
+        #mc_embed_signup .mc-field-group label,
+        #mc_embed_signup .indicates-required {
+            color: #9D4EDD; 
+            font-weight: 700;
+            font-family: 'Orbitron', sans-serif; /* Aplicar Orbitron a las etiquetas */
+        }
+        #mc_embed_signup input[type="email"] {
+            border: 2px solid #007BFF; 
+            background-color: #1f2937; 
+            color: #ffffff; 
+            box-shadow: 0 0 10px rgba(0, 123, 255, 0.5); 
+            height: 48px;
+            padding: 0 12px;
+        }
+        #mc_embed_signup .button {
+            /* Botón de envío con gradiente disruptivo Morado-Verde Neón */
+            background: linear-gradient(to right, #9D4EDD, #00FF99); 
+            color: #0D0D0D; 
+            font-weight: 900;
+            text-transform: uppercase;
+            font-family: 'Orbitron', sans-serif;
+            padding: 12px 30px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 15px rgba(0, 255, 153, 0.7);
+        }
+        #mc_embed_signup .button:hover {
+            box-shadow: 0 0 20px rgba(0, 255, 153, 1);
+            opacity: 0.9;
+        }
+        .mc-embed-success {
+             color: #00FF99 !important; 
+        }
+        #mc_embed_signup p a img {
+            display: none !important;
+        }
+        /* FIN: ESTILOS PERSONALIZADOS DE MAILCHIMP */
     </style>
 </head>
 <body>
 
-    <header class="bg-slate-900/95 backdrop-blur-lg sticky top-0 z-50 shadow-lg">
+    <header class="bg-slate-900/95 backdrop-blur-lg sticky top-0 z-50 shadow-lg border-b border-[#007BFF]/50">
         <nav class="container mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-16">
                 <div class="flex-shrink-0">
                     <a href="#" class="text-3xl font-bold logo-text brand-gradient-text">InitNullTV</a>
                 </div>
                 <div class="flex items-center space-x-4">
+                    <a href="#transparencia" class="text-[#007BFF] hover:text-[#9D4EDD] px-3 py-2 rounded-md text-sm font-medium transition-colors border border-[#007BFF] hover:border-[#9D4EDD]">Métricas</a>
                     <a href="#mision" class="text-slate-300 hover:text-[#007BFF] px-3 py-2 rounded-md text-sm font-medium transition-colors">Misión</a>
                     <a href="#ecosistema" class="text-slate-300 hover:text-[#007BFF] px-3 py-2 rounded-md text-sm font-medium transition-colors">Ecosistema</a>
                     <a href="#patreon" class="text-slate-300 hover:text-[#007BFF] px-3 py-2 rounded-md text-sm font-medium transition-colors">Comunidad</a>
@@ -66,7 +141,6 @@
 
     <main>
         
-        <!-- Hero Section - Dark BG -->
         <section id="hero" class="bg-[#0D0D0D] text-white py-24 sm:py-32">
             <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
                 <h1 class="text-4xl sm:text-6xl md:text-7xl font-extrabold tracking-tight">
@@ -79,32 +153,90 @@
                 <div class="max-w-4xl mx-auto mt-10 text-base sm:text-lg text-slate-400 space-y-4">
                     <p>🌐 InitNullTV es el canal donde documentamos en tiempo real cómo construir un <b>negocio digital desde cero</b>, con transparencia, errores incluidos y aprendizajes que puedes aplicar hoy.</p>
                 </div>
-                <div class="mt-12 space-y-4 sm:space-y-0 sm:space-x-6">
-                    <a href="https://www.youtube.com/@InitNullTV?sub_confirmation=1" target="_blank" class="inline-flex items-center justify-center bg-[#007BFF] text-white font-bold py-3 px-8 rounded-xl hover:bg-blue-700 transition-all shadow-xl brand-shadow text-lg">
-                        <span style="font-size: 1.5em; line-height: 0.8em; margin-right: 8px;">&#x25B6;</span> Suscríbete en YouTube
+                <div class="mt-12 space-y-8 sm:space-y-10 sm:space-x-6">
+                    
+                    <a href="https://www.youtube.com/@InitNullTV?sub_confirmation=1" target="_blank" class="inline-flex items-center justify-center cta-neon-green font-bold py-3 px-8 rounded-xl transition-all text-lg">
+                        <span style="font-size: 1.5em; line-height: 0.8em; margin-right: 8px;">&#x25B6;</span> SUSCRÍBETE Y NO TE LO PIERDAS
                     </a>
-                    <a href="https://www.initnulltv.com" target="_blank" class="inline-flex items-center justify-center bg-[#9D4EDD] text-white font-bold py-3 px-8 rounded-xl hover:bg-purple-700 transition-all shadow-xl brand-shadow text-lg">
-                        IR A INITNULLTV.COM
+                    
+                    <div class="max-w-xl mx-auto p-4 md:p-6 bg-slate-900 rounded-xl shadow-2xl border border-slate-700 mt-10">
+                        <p class="text-3xl font-extrabold text-[#007BFF] form-title-orbitron mb-4">¡NO EMPRENDAS SOLO!</p>
+                        <p class="text-xl text-slate-300 mb-6 subtitle">Recibe los aprendizajes de la semana en tu correo.</p>
+
+                        <div id="mc_embed_shell">
+                            <div id="mc_embed_signup">
+                                <form action="https://initnulltv.us1.list-manage.com/subscribe/post?u=b108a2ae451b0fd5aacaa0616&amp;id=8071f495f3&amp;f_id=00e6c0e1f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                                    <div id="mc_embed_signup_scroll">
+                                        <div class="indicates-required text-sm text-[#9D4EDD]">
+                                            <span class="asterisk">*</span> indica que es obligatorio
+                                        </div>
+                                        <div class="mc-field-group">
+                                            <label for="mce-EMAIL" class="text-lg font-bold text-[#007BFF] mb-2 block">
+                                                Dirección de correo electrónico <span class="asterisk">*</span>
+                                            </label>
+                                            <input type="email" name="EMAIL" class="required email w-full" id="mce-EMAIL" required="" value="" placeholder="tu@correo.com">
+                                        </div>
+                                        <div id="mce-responses" class="clear foot">
+                                            <div class="response mc-embed-error" id="mce-error-response" style="display: none;"></div>
+                                            <div class="response mc-embed-success" id="mce-success-response" style="display: none;"></div>
+                                        </div>
+                                        <div aria-hidden="true" style="position: absolute; left: -5000px;">
+                                            <input type="text" name="b_b108a2ae451b0fd5aacaa0616_8071f495f3" tabindex="-1" value="">
+                                        </div>
+                                        <div class="optionalParent mt-6">
+                                            <div class="clear foot">
+                                                <input type="submit" name="subscribe" id="mc-embedded-subscribe" class="button w-full" value="QUIERO RECIBIR LOS APRENDIZAJES">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script>
+                            <script type="text/javascript">
+                                (function($) {
+                                    window.fnames = new Array(); 
+                                    window.ftypes = new Array();
+                                    fnames[0]='EMAIL';ftypes[0]='email';
+                                }(jQuery));
+                                var $mcj = jQuery.noConflict(true);
+                            </script>
+                        </div>
+                    </div>
+                    </div>
+            </div>
+        </section>
+
+        <section id="transparencia" class="bg-slate-100 py-16 sm:py-24">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="text-3xl sm:text-4xl font-bold text-slate-800 logo-text mb-4">TRANSPARENCIA RADICAL EN NÚMEROS</h2>
+                <p class="mt-4 max-w-3xl mx-auto text-lg text-slate-600 subtitle mb-12">Estamos documentando el proceso. Estos son algunos datos reales de nuestro progreso.</p>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-white">
+                    <div class="p-6 rounded-xl shadow-lg bg-[#007BFF]">
+                        <p class="text-5xl font-extrabold logo-text">42</p>
+                        <p class="mt-2 text-xl font-bold">Días Transcurridos</p>
+                        <p class="text-sm opacity-80">Desde el "Día Cero" del proyecto.</p>
+                    </div>
+                    <div class="p-6 rounded-xl shadow-lg bg-[#9D4EDD]">
+                        <p class="text-5xl font-extrabold logo-text">$ 17.50</p>
+                        <p class="mt-2 text-xl font-bold">Ingresos Online (Total)</p>
+                        <p class="text-sm opacity-80">Incluye afiliados y micro-donaciones.</p>
+                    </div>
+                    <div class="p-6 rounded-xl shadow-lg bg-slate-800">
+                        <p class="text-5xl font-extrabold logo-text">1,250+</p>
+                        <p class="mt-2 text-xl font-bold">Comunidad Total</p>
+                        <p class="text-sm opacity-80">Suma de YouTube, Discord y Newsletter.</p>
+                    </div>
+                </div>
+                
+                <div class="mt-12">
+                    <a href="#ecosistema" class="inline-flex items-center justify-center bg-[#007BFF] text-white font-bold py-3 px-8 rounded-xl hover:bg-blue-700 transition-all shadow-xl brand-shadow text-lg">
+                        Ver todo el Ecosistema
                     </a>
                 </div>
             </div>
         </section>
 
-        <!-- Nuevo Banner de Redirección y Acceso a Herramientas -->
-        <section class="bg-slate-800 text-white py-6">
-            <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center md:flex md:justify-between md:items-center">
-                <p class="text-sm sm:text-lg text-slate-300 mb-3 md:mb-0">
-                    Este sitio es el repositorio de herramientas (<span class="text-[#00FF99]">GitHub Pages</span>). Para contenido principal, visita:
-                </p>
-                <div class="space-y-2 sm:space-y-0 sm:space-x-4 flex flex-col sm:flex-row justify-center items-center">
-                    <a href="https://www.initnulltv.com" target="_blank" class="text-sm font-bold text-[#007BFF] hover:text-[#9D4EDD] transition-colors underline">
-                        www.initnulltv.com
-                    </a>
-                </div>
-            </div>
-        </section>
-
-        <!-- Mision and Values Section -->
         <section id="mision" class="py-16 sm:py-24 bg-white">
             <div class="container mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center mb-16">
@@ -132,7 +264,6 @@
             </div>
         </section>
 
-        <!-- Ecosystem Section -->
         <section id="ecosistema" class="py-16 sm:py-24 bg-slate-900 text-white">
             <div class="container mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center mb-16">
@@ -175,7 +306,6 @@
             </div>
         </section>
 
-        <!-- Patreon & Community Section - Interactive Chart -->
         <section id="patreon" class="py-16 sm:py-24 bg-white">
             <div class="container mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center mb-16">
@@ -214,7 +344,7 @@
                             <p class="mt-2 text-slate-600">Acompañamiento estratégico: Consultoría 1:1, promoción en redes y canal privado en Discord.</p>
                         </div>
                         <a href="https://www.patreon.com/cw/InitNullTV" class="w-full text-center block bg-[#9D4EDD] text-white font-bold py-3 px-8 rounded-xl hover:bg-purple-700 transition-all shadow-xl mt-6">
-                            VER TODOS LOS PLANES EN PATREON
+                            ÚNETE A LA COMUNIDAD EN PATREON
                         </a>
                     </div>
                 </div>
@@ -223,127 +353,140 @@
 
     </main>
 
-    <footer class="bg-slate-800 text-white">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-8 text-center">
-             <p class="text-3xl font-bold logo-text brand-gradient-text">InitNullTV</p>
-             <p class="mt-2 text-slate-300">© 2025. Aprendiendo a emprender, juntos.</p>
-             <div class="mt-4 flex justify-center space-x-6">
-                <a href="#" class="text-slate-300 hover:text-[#007BFF] transition-colors">TikTok</a>
-                <a href="#" class="text-slate-300 hover:text-[#007BFF] transition-colors">Instagram</a>
-                <a href="#" class="text-slate-300 hover:text-[#007BFF] transition-colors">X / Twitter</a>
-                <a href="#" class="text-slate-300 hover:text-[#007BFF] transition-colors">LinkedIn</a>
-             </div>
+    <footer class="bg-slate-900 text-white py-12 border-t border-[#9D4EDD]/50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="mb-8">
+                <a href="#" class="text-3xl font-bold logo-text brand-gradient-text">InitNullTV</a>
+                <p class="mt-2 text-slate-400 subtitle">"Aprendiendo a emprender, juntos."</p>
+            </div>
+            
+            <div class="flex flex-wrap justify-center space-x-6 mb-8 text-sm font-medium">
+                <a href="#mision" class="text-slate-300 hover:text-[#007BFF] transition-colors">Misión</a>
+                <a href="#transparencia" class="text-slate-300 hover:text-[#007BFF] transition-colors">Métricas</a>
+                <a href="#ecosistema" class="text-slate-300 hover:text-[#007BFF] transition-colors">Ecosistema</a>
+                <a href="#patreon" class="text-slate-300 hover:text-[#007BFF] transition-colors">Patreon</a>
+                <a href="http://eepurl.com/jpoVf6" target="_blank" class="text-[#00FF99] hover:text-[#9D4EDD] transition-colors font-bold">👉 Suscríbete al Boletín (Mailchimp)</a>
+            </div>
+
+            <p class="text-sm text-slate-500">&copy; 2025 InitNullTV. Todos los derechos reservados.</p>
         </div>
     </footer>
 
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
+        // Mapeo de nombres de planes a colores de InitNullTV
+        const planColors = {
+            'EXPLORER': '#007BFF', 
+            'BUILDER': '#9D4EDD',  
+            'CATALYST': '#00FF99'   
+        };
 
-            const tierData = {
-                labels: ['Explorer', 'Builder', 'Catalyst'],
-                cost: [5, 15, 35],
-                benefits: [5, 7, 10]
-            };
+        const planData = {
+            'Explorer': { cost: 5, value: 3 },
+            'Builder': { cost: 15, value: 7 },
+            'Catalyst': { cost: 35, value: 10 }
+        };
 
-            let currentView = 'benefits'; // 'benefits' or 'cost'
+        let isValueView = true;
 
-            const chartCtx = document.getElementById('patreonChart').getContext('2d');
-            let patreonChart;
-
-            const createChart = (data) => {
-                if (patreonChart) patreonChart.destroy();
-
-                const gradientBar = chartCtx.createLinearGradient(0, 0, 0, 300);
-                gradientBar.addColorStop(0, '#007BFF');
-                gradientBar.addColorStop(1, '#9D4EDD');
-
-                const maxScale = currentView === 'cost' ? 40 : 12;
-                const labelText = currentView === 'cost' ? 'Costo Mensual (USD)' : 'Número de Beneficios';
-
-                patreonChart = new Chart(chartCtx, {
-                    type: 'bar',
-                    data: {
-                        labels: tierData.labels,
-                        datasets: [{
-                            label: labelText,
-                            data: data,
-                            backgroundColor: [gradientBar, gradientBar, gradientBar],
-                            borderColor: ['#007BFF', '#9D4EDD', '#00FF99'],
-                            borderWidth: 1,
-                            borderRadius: 8
-                        }]
+        const ctx = document.getElementById('patreonChart').getContext('2d');
+        let patreonChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['EXPLORER ($5)', 'BUILDER ($15)', 'CATALYST ($35)'],
+                datasets: []
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        display: false,
                     },
-                    options: {
-                        responsive: true,
-                        maintainAspectRatio: false,
-                        indexAxis: 'y',
-                        scales: {
-                            x: {
-                                beginAtZero: true,
-                                max: maxScale,
-                                ticks: {
-                                    color: '#475569'
-                                },
-                                title: {
-                                    display: true,
-                                    text: labelText,
-                                    color: '#475569',
-                                    font: { family: 'Montserrat' }
-                                },
-                                grid: {
-                                    color: 'rgba(0,0,0,0.1)'
+                    tooltip: {
+                        callbacks: {
+                            label: function(context) {
+                                let label = context.dataset.label || '';
+                                if (label) {
+                                    label += ': ';
                                 }
-                            },
-                            y: {
-                                ticks: {
-                                    color: '#334155',
-                                    font: { family: 'Orbitron', weight: 'bold' }
-                                },
-                                grid: {
-                                    display: false
+                                if (context.parsed.y !== null) {
+                                    label += isValueView ? `Valor (Escala 1-10): ${context.parsed.y}` : `Costo: $${context.parsed.y}`;
                                 }
-                            }
-                        },
-                        plugins: {
-                            legend: {
-                                display: false
-                            },
-                            tooltip: {
-                                callbacks: {
-                                    label: function(context) {
-                                        let label = context.dataset.label || '';
-                                        if (label) {
-                                            label += ': ';
-                                        }
-                                        if (context.parsed.x !== null) {
-                                            label += currentView === 'cost' ? `$${context.parsed.x}` : context.parsed.x;
-                                        }
-                                        return label;
-                                    }
-                                }
+                                return label;
                             }
                         }
+                    },
+                    title: {
+                        display: true,
+                        text: 'Valor de los Planes de Patreon',
+                        color: '#1e293b',
+                        font: {
+                            family: 'Orbitron',
+                            size: 18,
+                            weight: 'bold'
+                        }
                     }
-                });
-            };
-
-            const toggleChart = () => {
-                const button = document.getElementById('toggle-chart');
-                if (currentView === 'benefits') {
-                    currentView = 'cost';
-                    createChart(tierData.cost);
-                    button.textContent = 'Mostrar Valor (vs. Costo)';
-                } else {
-                    currentView = 'benefits';
-                    createChart(tierData.benefits);
-                    button.textContent = 'Mostrar Costo (vs. Valor)';
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        ticks: {
+                            color: '#1e293b',
+                            font: {
+                                family: 'Roboto',
+                            },
+                            callback: function(value, index, ticks) {
+                                return isValueView ? value : '$' + value;
+                            }
+                        },
+                        grid: {
+                            color: 'rgba(0, 0, 0, 0.1)'
+                        }
+                    },
+                    x: {
+                        ticks: {
+                            color: '#1e293b',
+                            font: {
+                                family: 'Roboto',
+                                weight: 'bold'
+                            }
+                        },
+                        grid: {
+                            display: false
+                        }
+                    }
                 }
-            };
-
-            document.getElementById('toggle-chart').addEventListener('click', toggleChart);
-
-            createChart(tierData.benefits);
+            }
         });
+
+        function updateChart() {
+            const dataKey = isValueView ? 'value' : 'cost';
+            const chartData = [planData.Explorer[dataKey], planData.Builder[dataKey], planData.Catalyst[dataKey]];
+            const chartColors = [planColors['EXPLORER'], planColors['BUILDER'], planColors['CATALYST']];
+            const newTitle = isValueView ? 'Valor de los Planes de Patreon' : 'Costo de los Planes de Patreon (en USD)';
+
+            patreonChart.data.datasets = [{
+                label: isValueView ? 'Valor (1-10)' : 'Costo (USD)',
+                data: chartData,
+                backgroundColor: chartColors,
+                borderColor: chartColors,
+                borderWidth: 1,
+                borderRadius: 5,
+                hoverBackgroundColor: chartColors.map(color => color + 'AA')
+            }];
+
+            patreonChart.options.plugins.title.text = newTitle;
+            patreonChart.update();
+        }
+
+        document.getElementById('toggle-chart').addEventListener('click', function() {
+            isValueView = !isValueView;
+            this.textContent = isValueView ? 'Mostrar Valor (vs. Costo)' : 'Mostrar Costo (vs. Valor)';
+            updateChart();
+        });
+
+        // Inicializar el gráfico con la vista de Valor
+        updateChart();
     </script>
 </body>
 </html>
