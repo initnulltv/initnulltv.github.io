@@ -72,8 +72,15 @@
   .text-turquesa { color: var(--color-turquesa); }
   .text-morado-neon { color: var(--color-morado-neon); }
   .text-verde-neon { color: var(--color-verde-neon); }
+  
+  .brand-gradient-text-404 {
+    background: linear-gradient(90deg, var(--color-turquesa), var(--color-morado-neon));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+  }
 
-  /* Gradientes */
   .brand-gradient-text {
     background: linear-gradient(to right, var(--color-turquesa), var(--color-morado-neon));
     -webkit-background-clip: text;
