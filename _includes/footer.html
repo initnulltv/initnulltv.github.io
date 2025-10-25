@@ -1,0 +1,50 @@
+<footer class="bg-[#0D0D0D] text-[#E5E7EB] pt-12 pb-6">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="border-t border-[#9D4EDD]/40 mb-6"></div>
+
+    <div class="flex flex-col md:flex-row justify-between items-center text-xs gap-y-3">
+      <p class="text-sm text-slate-500 text-center md:text-left">
+        <a href="{{ '/' | relative_url }}" class="text-4xl font-bold logo-text brand-gradient-text block mb-2">
+          InitNullTV
+        </a>
+        &copy; {{ site.time | date: '%Y' }} InitNullTV. Todos los derechos reservados.
+      </p>
+
+      <div class="flex flex-col items-center md:items-end text-right">
+        <p class="mb-1 legal-links space-x-1">
+          <a href="{{ '/aviso-legal/' | relative_url }}" class="text-[#9D4EDD] hover:text-[#00FF99] transition-colors">Aviso Legal</a>
+          <span class="separator">|</span>
+          <a href="{{ '/politica-privacidad/' | relative_url }}" class="text-[#9D4EDD] hover:text-[#00FF99] transition-colors">Política de Privacidad</a>
+          <span class="separator">|</span>
+          <a href="{{ '/politica-cookies/' | relative_url }}" class="text-[#9D4EDD] hover:text-[#00FF99] transition-colors">Política de Cookies</a>
+          <span class="separator">|</span>
+          <a href="{{ '/terminos-condiciones/' | relative_url }}" class="text-[#9D4EDD] hover:text-[#00FF99] transition-colors">Términos y Condiciones</a>
+          <span class="separator">|</span>
+          <a href="{{ '/sitemap.xml' | relative_url }}" class="text-[#9D4EDD] hover:text-[#00FF99] transition-colors">Sitemap</a>
+          <span class="separator">|</span>
+          <a href="{{ '/feed.xml' | relative_url }}" class="text-[#9D4EDD] hover:text-[#00FF99] transition-colors">RSS</a>
+        </p>
+
+        <p class="text-xs text-slate-600">
+          Este sitio es parte del proyecto educativo documental de InitNullTV.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "InitNullTV",
+    "url": "{{ site.url }}",
+    "logo": "{{ site.logo | absolute_url }}",
+    "sameAs": [
+      "{{ site.links.youtube }}",
+      "{{ site.links.instagram }}",
+      "{{ site.links.tiktok }}",
+      "{{ site.links.twitter }}",
+    ]
+  }
+  </script>
+</footer>

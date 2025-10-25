@@ -1,0 +1,35 @@
+User-agent: *
+Allow: /
+
+# Ocultar áreas privadas/de administración.
+Disallow: /wp-admin/
+Disallow: /admin/
+Disallow: /login/
+Disallow: /register/
+Disallow: /checkout/
+
+# Ocultar archivos o carpetas temporales
+Disallow: /temp/
+Disallow: /test/
+Disallow: /drafts/
+
+# Ocultar parámetros de búsqueda
+Disallow: /*?
+Disallow: /search/
+Disallow: /admin/
+Disallow: /login/
+Disallow: /checkout/
+
+# Sistema de comunidad
+Disallow: /community/profile/
+Disallow: /members/
+
+# Bloqueos específicos de Jekyll
+Disallow: /_site/
+Disallow: /.jekyll-cache/
+Disallow: /.sass-cache/
+Disallow: /vendor/
+Disallow: /.git/
+
+# Ubicación del Sitemap
+Sitemap: /sitemap.xml

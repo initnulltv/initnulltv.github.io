@@ -1,0 +1,117 @@
+<section id="references" class="py-20 sm:py-24 bg-gray-50 dark:bg-negro-profundo">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl sm:text-4xl font-extrabold logo-text dark:text-gray-100">
+                La Prueba es el Proceso
+            </h2>
+            <p class="mt-2 text-xl subtitle text-gray-600 dark:text-gris-claro">
+                No confíes en promesas vacías. Así construimos InitNullTV, paso a paso.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-10">
+
+            <div class="progress-card dark:bg-fondo-oscuro-suave p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 border border-gray-200 dark:border-morado-neon/30">
+                <div class="progress-header flex items-center justify-between">
+                    <h3 class="progress-title text-2xl font-bold logo-text brand-gradient-text">
+                        Avance
+                    </h3>
+                    <span id="progress-status-text" class="progress-status status-pending px-3 py-1 text-xs font-subtitulo uppercase tracking-wider rounded-full bg-turquesa/20 text-color-turquesa">
+                        Cargando...
+                    </span>
+                </div>
+                
+                <div id="progreso-dinamico">
+                    <p class="progress-description mt-3 text-gris-claro">
+                        Las métricas reales del canal: desde 0 suscriptores, errores y el camino a la rentabilidad.
+                    </p>
+                    <p class="mt-4 text-gris-claro">Calculando progreso...</p>
+                </div>
+            </div>
+
+            <div class="progress-card dark:bg-fondo-oscuro-suave p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 border border-gray-200 dark:border-turquesa/30">
+                <div class="progress-header flex items-center justify-between">
+                    <h3 class="progress-title text-2xl font-bold logo-text brand-gradient-text">
+                        Opiniones
+                    </h3>
+                </div>
+                <p class="progress-description mt-3 text-gris-claro">
+                    Nuestro valor no es teoría. Es lo que aplicamos y los resultados que la comunidad nos valida.
+                </p>
+                
+                <div class="mt-6 text-center">
+                <p class="mb-4 text-gris-claro">
+                    Da el siguiente paso: mira las pruebas tangibles del proceso de la comunidad.
+                </p>
+                </div>
+                
+                <p class="progress-detail mt-3 text-sm text-right font-code">
+                    <a href="/comunidad/" class="text-morado-neon hover:underline">Ver más opiniones</a>
+                </p>
+            </div>
+
+            <div class="progress-card dark:bg-fondo-oscuro-suave p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 border border-gray-200 dark:border-verde-neon/30">
+                <div class="progress-header flex items-center justify-between">
+                    <h3 class="progress-title text-2xl font-bold logo-text brand-gradient-text">
+                        Stack
+                    </h3>
+                </div>
+                <p class="progress-description mt-3 text-gris-claro">
+                    Solo recomendamos lo que usamos: IA, automatización, hosting y productividad.
+                </p>
+                <ul class="mt-4 space-y-2 text-sm text-gris-claro font-code list-disc list-inside">
+                    <li><strong class="text-verde-neon">Notion:</strong> Gestión de contenido.</li>
+                    <li><strong class="text-morado-neon">Gemini:</strong> Asistencia en guiones y SEO.</li>
+                    <li><strong class="text-turquesa">Canva:</strong> Creación de diseños.</li>
+                </ul>
+                <p class="progress-detail mt-3 text-sm text-right font-code">
+                    <a href="/recursos/" class="text-turquesa hover:underline">Ver lista completa</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const suscriptoresActuales = 30;
+        const objetivoSuscriptores = 500;
+        const porcentaje = objetivoSuscriptores > 0 
+            ? Math.min((suscriptoresActuales / objetivoSuscriptores) * 100, 100) 
+            : 0;
+        let estiloBarra = '';
+        let statusText = '';
+        let statusClass = 'status-pending px-3 py-1 text-xs font-semibold rounded-full bg-turquesa/20 text-turquesa dark:text-negro-profundo'; 
+
+        if (porcentaje >= 100) {
+            estiloBarra = `background-color: var(--color-verde-neon); width: 100%;`;
+            statusText = 'Objetivo Cumplido';
+            statusClass = 'status-completed px-3 py-1 text-xs font-semibold rounded-full bg-verde-neon/20 text-verde-neon dark:text-negro-profundo';
+        } else {
+            estiloBarra = `background: linear-gradient(to right, var(--color-turquesa), var(--color-morado-neon)); width: ${porcentaje}%;`;
+            statusText = 'Proceso'; 
+        }
+
+        const htmlProgreso = `
+            <p class="progress-description mt-3 text-gris-claro">
+                Mostramos las métricas reales del canal: desde 0 suscriptores, errores y el camino a la rentabilidad.
+            </p>
+
+            <div class="progress-bar-container mt-4 dark:bg-fondo-oscuro-suave/50 rounded-full h-2.5 bg-gray-200">
+                <div class="progress-bar h-2.5 rounded-full" style="${estiloBarra}"></div>
+            </div>
+
+            <p class="progress-detail mt-2 text-sm text-right font-code dark:text-gris-claro/70 text-gray-500">
+                +${suscriptoresActuales} suscriptores orgánicos (Meta: ${objetivoSuscriptores})
+            </p>
+        `;
+
+        document.getElementById('progreso-dinamico').innerHTML = htmlProgreso;
+        const headerStatus = document.getElementById('progress-status-text');
+        if (headerStatus) {
+            headerStatus.className = `progress-status ${statusClass}`;
+            headerStatus.textContent = statusText;
+        }
+
+    });
+</script>

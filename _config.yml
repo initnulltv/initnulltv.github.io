@@ -1,0 +1,81 @@
+title: "InitNullTV - Negocios digitales"
+description: "Guía clara para principiantes no técnicos de Latinoamérica. Aprende a crear tu negocio digital real, sin humo ni promesas vacías. Documentamos el proceso."
+url: "https://initnulltv.com"
+baseurl: "" 
+language: "es"
+author: "InitNullTV"
+default_image: "/assets/img/initnulltv-default.jpg"
+logo: "/assets/favicon/favicon-96x96.png"
+brand_color: "#007BFF"
+twitter_username: "@InitNullTV"
+
+links:
+  youtube: "https://www.youtube.com/@InitNullTV?sub_confirmation=1"
+  instagram: "https://instagram.com/initnulltv"
+  tiktok: "https://tiktok.com/@initnulltv"
+  bluesky: "https://bsky.app/profile/initnulltv.com"
+  github: "https://github.com/initnulltv"
+  patreon: "https://www.patreon.com/c/InitNullTV"
+  whatsapp_channel: "https://whatsapp.com/channel/0029VbBFbf8KwqSQ2QjoVE2y"
+  whatsapp_community: "https://chat.whatsapp.com/GXplv2gYMZP3sVUobdrVBN"
+  telegram_channel: "https://t.me/initnulltv"
+  telegram_group: "https://t.me/+oD-3607T9iliOTM5"
+  discord_group: "https://discord.gg/Jg6aGhcnU6"
+
+collections:
+  proyecto:
+    output: true
+  comunidad:
+    output: true
+  recursos:
+    output: true
+  servicios:
+    output: true
+  contacto:
+    output: true
+
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: post
+      image: "/assets/img/initnulltv-default.jpg"
+  - scope:
+      path: "proyecto"
+    values:
+      layout: section
+  - scope:
+      path: "comunidad"
+    values:
+      layout: section
+  - scope:
+      path: "recursos"
+    values:
+      layout: section
+  - scope:
+      path: "servicios"
+    values:
+      layout: section
+  - scope:
+      path: "contacto"
+    values:
+      layout: section
+  - scope:
+      path: ""
+    values:
+      layout: page
+      image: "/assets/img/initnulltv-default.jpg"
+
+markdown: kramdown
+highlighter: rouge
+permalink: /:categories/:title/
+timezone: America/Bogota
+
+plugins:
+  - jekyll-sitemap
+  - jekyll-feed
+  - jekyll-seo-tag
+
+paginate: 9
+paginate_path: "/blog/page:num"

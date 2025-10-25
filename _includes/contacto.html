@@ -1,0 +1,43 @@
+<section id="contacto" class="py-16 sm:py-24 bg-slate-900 text-white dark:bg-black-profundo">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-2xl">
+    <h2 class="text-3xl sm:text-4xl font-bold text-center mb-8 brand-gradient-text logo-text">
+      Envíame un mensaje
+    </h2>
+    <p class="text-center text-slate-400 mb-10 subtitle">
+      ¿Tienes una idea, colaboración o duda sobre InitNullTV? <br>Déjala aquí y te responderé pronto.
+    </p>
+
+    <form name="contacto" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="space-y-6">
+      <p class="hidden">
+        <label>No me llenes esto: <input name="bot-field" /></label>
+      </p>
+      <div>
+        <label for="nombre" class="block mb-2 text-gray-300 font-medium">Nombre</label>
+        <input type="text" id="nombre" name="nombre" required
+          class="w-full bg-slate-800 border border-turquesa/40 focus:border-turquesa rounded-xl p-3 text-white outline-none transition-all">
+      </div>
+
+      <div>
+        <label for="email" class="block mb-2 text-gray-300 font-medium">Correo electrónico</label>
+        <input type="email" id="email" name="email" required
+          class="w-full bg-slate-800 border border-turquesa/40 focus:border-turquesa rounded-xl p-3 text-white outline-none transition-all">
+      </div>
+
+      <div>
+        <label for="mensaje" class="block mb-2 text-gray-300 font-medium">Mensaje</label>
+        <textarea id="mensaje" name="mensaje" rows="5" required
+          class="w-full bg-slate-800 border border-turquesa/40 focus:border-turquesa rounded-xl p-3 text-white outline-none transition-all"></textarea>
+      </div>
+
+      <input type="hidden" name="form-name" value="contacto" /> <input type="hidden" name="next" value="/gracias/" />
+
+      <div class="mt-12 text-center">
+        <button type="submit"
+          class="inline-flex items-center justify-center cta-neon-green font-bold py-3 px-10 rounded-xl transition-all text-lg logo-text">
+          <span style="font-size: 1.3em; line-height: 0.8em; margin-right: 8px;">&#x2709;</span>
+          ENVIAR MENSAJE 🚀
+        </button>
+      </div>
+    </form>
+  </div>
+</section>
