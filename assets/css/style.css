@@ -2652,6 +2652,10 @@ blockquote {
   padding: 0px;
 }
 
+.p-12 {
+  padding: 3rem;
+}
+
 .p-2 {
   padding: 0.5rem;
 }
