@@ -2,6 +2,7 @@
 layout: page
 title: "Gracias"
 permalink: /gracias/
+sitemap: false
 ---
 
 <section class="py-20 text-center text-white dark:bg-black-profundo">

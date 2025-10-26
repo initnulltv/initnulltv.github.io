@@ -38,4 +38,4 @@ Disallow: /recursos/video-script-idea-ia-pro.html
 Disallow: /recursos/video-script-idea-ia-pro/
 
 # Ubicación del Sitemap
-Sitemap: /sitemap.xml
+Sitemap: https://initnulltv.com/sitemap.xml

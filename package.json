@@ -1,28 +1,19 @@
 {
-  "name": "initnulltv.github.io",
+  "name": "initnulltv",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "InitNullTV - Guía práctica para emprender desde cero y crear negocios digitales reales en Latinoamérica",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "build:css": "tailwindcss -i ./assets/css/input.css -o ./assets/css/style.css --minify",
-    "watch:css": "tailwindcss -i ./assets/css/input.css -o ./assets/css/style.css --watch"
+    "watch:css": "tailwindcss -i ./assets/css/input.css -o ./assets/css/style.css --watch",
+    "serve": "concurrently \"npm run watch:css\" \"bundle exec jekyll serve\""
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/initnulltv/initnulltv.github.io.git"
-  },
-  "keywords": [],
-  "author": "",
+  "author": "InitNullTV",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/initnulltv/initnulltv.github.io/issues"
-  },
-  "homepage": "https://github.com/initnulltv/initnulltv.github.io#readme",
   "devDependencies": {
     "@tailwindcss/forms": "^0.5.10",
     "@tailwindcss/typography": "^0.5.19",
     "autoprefixer": "^10.4.21",
+    "concurrently": "^9.2.1",
     "postcss": "^8.5.6",
     "tailwindcss": "^3.4.18"
   }

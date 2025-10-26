@@ -1,14 +1,17 @@
+# Configuración general
 title: "InitNullTV - Negocios digitales"
 description: "Guía práctica para emprender desde cero y crear negocios digitales reales en Latinoamérica, sin humo ni falsas promesas."
 url: "https://initnulltv.com"
 baseurl: "" 
-language: "es_ES"
+language: "es"
 author: "InitNullTV"
 default_image: "/assets/img/og/initnulltv-og.jpg"
 logo: "/assets/favicon/favicon-96x96.png"
 brand_color: "#007BFF"
 twitter_username: "@InitNullTV"
+timezone: "America/Lima"
 
+# Redes y enlaces
 links:
   youtube: "https://www.youtube.com/@InitNullTV?sub_confirmation=1"
   instagram: "https://instagram.com/initnulltv"
@@ -22,6 +25,7 @@ links:
   telegram_group: "https://t.me/+oD-3607T9iliOTM5"
   discord_group: "https://discord.gg/Jg6aGhcnU6"
 
+# Colecciones
 collections:
   proyecto:
     output: true
@@ -29,18 +33,20 @@ collections:
     output: true
   recursos:
     output: true
-  servicios:
-    output: true
   contacto:
     output: true
 
+# Valores por defecto (layouts, imagenes, etc)
 defaults:
+  # Posts en _posts/
   - scope:
       path: ""
       type: "posts"
     values:
       layout: post
       image: "/assets/img/og/initnulltv-og.jpg"
+
+  # Colecciones
   - scope:
       path: "proyecto"
     values:
@@ -54,29 +60,35 @@ defaults:
     values:
       layout: section
   - scope:
-      path: "servicios"
-    values:
-      layout: section
-  - scope:
       path: "contacto"
     values:
       layout: section
+
+  # Páginas generales
   - scope:
       path: ""
     values:
       layout: page
       image: "/assets/img/og/initnulltv-og.jpg"
 
+# Markdown y resaltador
 markdown: kramdown
 highlighter: rouge
 permalink: /:categories/:title/
-timezone: America/Lima
 
+# Plugins Jekyll 4.4.1
 plugins:
   - jekyll-sitemap
   - jekyll-feed
   - jekyll-seo-tag
-  - jekyll-postcss
+  - jekyll-paginate
 
-paginate: 9
+# Archivos y carpetas a excluir del build
+exclude:
+  - vendor/
+  - "/recursos/los-3-pilares-de-tu-marca.html"
+  - "/recursos/video-script-idea-ia-pro.html"
+
+# Paginación de blog
+paginate: 6
 paginate_path: "/blog/page:num"

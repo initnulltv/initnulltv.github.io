@@ -1,9 +1,10 @@
 [build]
-  command = "JEKYLL_ENV=production bundle exec jekyll build"
+  command = "npm run build:css && JEKYLL_ENV=production bundle exec jekyll build"
   publish = "_site"
 
 [build.environment]
   RUBY_VERSION = "3.2.2"
+  NODE_VERSION = "20"
   JEKYLL_ENV = "production"
 
 [functions]
@@ -24,11 +25,11 @@
   Cache-Control = "public, max-age=31536000, immutable"
 
 [[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
-
-[[redirects]]
   from = "/404"
   to = "/404.html"
   status = 404
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

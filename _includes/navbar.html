@@ -7,10 +7,15 @@
                 </a>
             </div>
 
-            <button id="menu-toggle" class="lg:hidden p-2 text-slate-300 hover:text-[#007BFF] transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-[#007BFF] rounded-md" aria-expanded="false" aria-controls="mobile-links-container">
-                <svg id="menu-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
-                <svg id="close-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
-            </button>
+                <button
+                    id="menu-toggle"
+                    class="lg:hidden p-2 text-slate-300 hover:text-[#007BFF] transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-[#007BFF] rounded-md"
+                    aria-expanded="false"
+                    aria-controls="mobile-links-container"
+                    aria-label="Abrir Menú" >
+                    <svg id="menu-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                    <svg id="close-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                </button>
 
             <div id="desktop-menu" class="hidden lg:flex lg:items-center space-x-4 font-subtitulo">
                 <a href="{{ '/' | relative_url }}" class="text-slate-300 hover:text-[#007BFF] px-3 py-2 rounded-md text-sm font-medium transition-colors">Inicio</a>
