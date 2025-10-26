@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+/* -------------------------------------- */
+/* 1. FONT-FACES (No necesitan cambios)    */
+/* -------------------------------------- */
+
 @font-face {
     font-family: 'Roboto';
     src: url('../fonts/roboto-regular.woff2') format('woff2'),
@@ -53,6 +57,10 @@
     font-display: swap; 
 }
 
+/* -------------------------------------- */
+/* 2. VARIABLES DE MARCA (:root)          */
+/* -------------------------------------- */
+
 :root {
   --color-turquesa: #007BFF;
   --color-negro-profundo: #0D0D0D;
@@ -72,22 +80,55 @@
   --font-code: "Fira Code", "Roboto Mono", monospace;
 }
 
+/* -------------------------------------- */
+/* 3. ESTILOS BASE (@layer base)          */
+/* -------------------------------------- */
+
 @layer base {
   body {
     font-family: var(--font-base);
     background-color: var(--color-fondo-claro);
     color: var(--color-texto-principal);
     line-height: 1.6;
+    /* Aplicando el reset de márgenes y padding que solicitaste */
     margin: 0;
     padding: 0;
   }
 
   p { margin-bottom: 1.5rem; }
 
-  h1, h2, h3, h4, .logo-text {
+  /* SOLUCIÓN AL ERROR DE API OBSOLETA: Definir tamaños de fuente explícitos */
+  h1 {
     font-family: var(--font-titulos);
+    font-size: 3rem; 
+    font-weight: 700;
+    line-height: 1.1; 
+    margin-top: 2.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  h2 {
+    font-family: var(--font-titulos);
+    font-size: 2rem; 
+    font-weight: 700;
+    line-height: 1.2; 
     margin-top: 2rem;
     margin-bottom: 1rem;
+  }
+
+  h3 {
+    font-family: var(--font-titulos);
+    font-size: 1.5rem; 
+    font-weight: 700;
+    line-height: 1.3; 
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+  }
+  
+  h4, .logo-text {
+    font-family: var(--font-titulos);
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
   }
 
   ul, ol {
@@ -111,7 +152,13 @@
     background-color: rgba(0, 123, 255, 0.05);
   }
 
-  .subtitle { font-family: var(--font-subtitulo); }
+  /* Clases de texto y gradientes */
+  .subtitle { 
+    font-family: var(--font-subtitulo); 
+    /* Le añadimos un tamaño por defecto para mejorar el uso como subtítulo */
+    font-size: 1.25rem; 
+    font-weight: 400;
+  }
   .text-turquesa { color: var(--color-turquesa); }
   .text-morado-neon { color: var(--color-morado-neon); }
   .text-verde-neon { color: var(--color-verde-neon); }
@@ -150,6 +197,77 @@
   .cta-group {
     @apply flex flex-col items-center space-y-4;
     @apply sm:flex-row sm:justify-center sm:space-y-0 sm:gap-6;
+  }
+}
+
+/* -------------------------------------- */
+/* 4. COMPONENTES (@layer components)     */
+/* -------------------------------------- */
+
+@layer components {
+  /* CTA Principal: Verde Neón */
+  .cta-neon-green {
+    background-color: var(--color-verde-neon);
+    color: var(--color-negro-profundo);
+    font-family: var(--font-titulos);
+    font-weight: 700;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 10px var(--color-verde-neon), 0 0 20px rgba(0, 255, 153, 0.5);
+    transition: all 0.3s ease-in-out;
+  }
+
+  .cta-neon-green:hover {
+    box-shadow: 0 0 15px var(--color-verde-neon), 0 0 30px rgba(0, 255, 153, 0.7);
+    transform: translateY(-2px);
+  }
+
+  /* CTA Secundaria: Morado Neón */
+  .cta-secondary-purple {
+    background-color: transparent;
+    color: var(--color-morado-neon);
+    border: 2px solid var(--color-morado-neon);
+    font-family: var(--font-subtitulo);
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .cta-secondary-purple:hover {
+    background-color: var(--color-morado-neon);
+    color: var(--color-negro-profundo);
+  }
+
+  /* ADMONITION TIP (Soluciones o Consejos) */
+  .admonition-tip {
+    padding: 1rem 1.5rem;
+    margin: 1.5rem 0;
+    border-left: 5px solid var(--color-turquesa);
+    background-color: rgba(0, 123, 255, 0.1); /* Fondo Turquesa semitransparente */
+    border-radius: 0.25rem;
+    color: var(--color-gris-claro); /* Texto gris claro (para modo oscuro) */
+  }
+
+  .admonition-tip strong {
+    color: var(--color-turquesa);
+    font-family: var(--font-titulos);
+    font-weight: 700;
+  }
+
+  /* ADMONITION WARNING (Errores o Advertencias) */
+  .admonition-warning {
+    padding: 1rem 1.5rem;
+    margin: 1.5rem 0;
+    border-left: 5px solid var(--color-morado-neon);
+    background-color: rgba(157, 78, 221, 0.1); /* Fondo Morado semitransparente */
+    border-radius: 0.25rem;
+    color: var(--color-gris-claro);
+  }
+
+  .admonition-warning strong {
+    color: var(--color-morado-neon);
+    font-family: var(--font-titulos);
+    font-weight: 700;
   }
 }
 
