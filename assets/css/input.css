@@ -146,6 +146,11 @@
   .hr-brand {
     @apply my-20 border-t border-[#007BFF]/30;
   }
+
+  .cta-group {
+    @apply flex flex-col items-center space-y-4;
+    @apply sm:flex-row sm:justify-center sm:space-y-0 sm:gap-6;
+  }
 }
 
 /* =========================================================
