@@ -13,10 +13,13 @@ timezone: "America/Lima"
 
 # Redes y enlaces
 links:
-  youtube: "https://www.youtube.com/@InitNullTV?sub_confirmation=1"
+  youtube: "https://www.youtube.com/@InitNullTV"
   instagram: "https://instagram.com/initnulltv"
   tiktok: "https://tiktok.com/@initnulltv"
+  twitter: "https://x.com/initnulltv"
   bluesky: "https://bsky.app/profile/initnulltv.com"
+  linkedin_company: "https://www.linkedin.com/company/initnulltv"
+  linkedin: "https://www.linkedin.com/in/wuilmerbolivar/"
   github: "https://github.com/initnulltv"
   patreon: "https://www.patreon.com/c/InitNullTV"
   whatsapp_channel: "https://whatsapp.com/channel/0029VbBFbf8KwqSQ2QjoVE2y"
