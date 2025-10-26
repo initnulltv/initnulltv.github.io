@@ -1643,150 +1643,6 @@ blockquote {
   }
 }
 
-#mc_embed_signup {
-  background-color: var(--color-negro-profundo) !important;
-  color: var(--color-gris-claro);
-  font-family: var(--font-base);
-  font-size: 16px;
-  max-width: 450px;
-  margin: 20px auto;
-  padding: 30px;
-  border-radius: 12px;
-  border: 1px solid var(--color-morado-neon);
-  box-shadow: 0 0 20px rgba(157, 78, 221, 0.4);
-}
-
-#mc_embed_signup h2 {
-  font-family: var(--font-titulos);
-  color: var(--color-turquesa);
-  font-size: 1.8rem;
-  text-align: center;
-  margin-bottom: 25px;
-}
-
-#mc_embed_signup label,
-#mc_embed_signup .indicates-required {
-  color: var(--color-gris-claro);
-  font-family: var(--font-subtitulo);
-  font-size: 0.95rem;
-  margin-bottom: 8px;
-  display: block;
-}
-
-#mc_embed_signup input[type="email"] {
-  background-color: var(--color-fondo-oscuro-suave);
-  color: var(--color-gris-claro);
-  border: 1px solid var(--color-morado-neon);
-  border-radius: 6px;
-  height: 48px;
-  padding: 0 12px;
-  margin-top: 5px;
-  margin-bottom: 5px;
-  transition: border-color 0.3s ease;
-  width: 100%;
-  box-sizing: border-box;
-}
-
-#mc_embed_signup input[type="email"]:focus {
-  border-color: var(--color-turquesa);
-  outline: none;
-}
-
-#mc_embed_signup .\!response {
-  background-color: transparent !important;
-  border: none !important;
-  color: var(--color-morado-neon) !important;
-  font-family: var(--font-subtitulo) !important;
-  font-size: 0.9rem !important;
-  padding: 5px 0 !important;
-  margin-top: 5px !important;
-  margin-bottom: 15px !important;
-  text-align: center !important;
-}
-
-#mc_embed_signup .response {
-  background-color: transparent;
-  border: none;
-  color: var(--color-morado-neon);
-  font-family: var(--font-subtitulo);
-  font-size: 0.9rem;
-  padding: 5px 0;
-  margin-top: 5px;
-  margin-bottom: 15px;
-  text-align: center;
-}
-
-#mc_embed_signup .button {
-  background-color: var(--color-verde-neon) !important;
-  color: var(--color-negro-profundo) !important;
-  font-family: var(--font-titulos) !important;
-  font-weight: 900 !important;
-  text-transform: uppercase;
-  border: none !important;
-  padding: 14px 28px !important;
-  border-radius: 8px !important;
-  margin-top: 5px;
-  width: 100%;
-  box-shadow: 0 0 15px var(--color-verde-neon), 0 0 25px rgba(0,255,153,0.7) !important;
-  transition: all 0.3s ease;
-  cursor: pointer;
-}
-
-#mc_embed_signup .button:hover {
-  box-shadow: 0 0 30px rgba(0,255,153,1) !important;
-  transform: translateY(-3px);
-}
-
-#mc_embed_signup .referral_badge {
-  filter: invert(100%);
-  display: block;
-  margin: 25px auto 0 auto;
-  width: 150px;
-}
-
-#mc_embed_signup .mc-field-group {
-  margin-bottom: 0;
-}
-
-#mc_embed_signup .clear.foot {
-  text-align: center;
-}
-
-/* Botón CTA (Llamada a la Acción) - Aplicando el estilo .cta-neon-green */
-
-#mc_embed_signup .button {
-  /* Usamos !important para asegurar que sobrescribe los estilos inline de Mailchimp */
-  background-color: var(--color-verde-neon) !important;
-  color: var(--color-negro-profundo) !important;
-  font-family: var(--font-titulos) !important;
-  /* Orbitron */
-  font-weight: 900 !important;
-  text-transform: uppercase;
-  border: none !important;
-  padding: 12px 24px !important;
-  border-radius: 6px !important;
-  margin-top: 20px;
-  width: 100%;
-  /* Ocupa todo el ancho */
-  /* Sombra intensa del CTA principal */
-  box-shadow: 0 0 10px var(--color-verde-neon), 0 0 20px rgba(0,255,153,0.7) !important;
-  transition: all 0.3s ease;
-  cursor: pointer;
-}
-
-/* Efecto Hover para el Botón CTA */
-
-#mc_embed_signup .button:hover {
-  box-shadow: 0 0 25px rgba(0,255,153,1) !important;
-  transform: translateY(-2px);
-}
-
-/* Logo de Mailchimp (para que se vea en fondo oscuro) */
-
-#mc_embed_signup .referral_badge {
-  filter: invert(100%);
-}
-
 .visible {
   visibility: visible;
 }
@@ -2077,6 +1933,10 @@ blockquote {
   width: 20rem;
 }
 
+.w-auto {
+  width: auto;
+}
+
 .w-full {
   width: 100%;
 }
@@ -2323,6 +2183,12 @@ blockquote {
   --tw-space-x-reverse: 0;
   margin-right: calc(1.5rem * var(--tw-space-x-reverse));
   margin-left: calc(1.5rem * calc(1 - var(--tw-space-x-reverse)));
+}
+
+.space-y-0 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(0px * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(0px * var(--tw-space-y-reverse));
 }
 
 .space-y-10 > :not([hidden]) ~ :not([hidden]) {
@@ -3231,12 +3097,85 @@ blockquote {
   color: var(--color-morado-neon);
 }
 
-/* =========================================================
-   VARIABLES GLOBALES
-   ========================================================= */
+@font-face {
+  font-family: 'Roboto';
+
+  src: url('../fonts/roboto-regular.woff2') format('woff2'),
+         url('../fonts/roboto-regular.woff') format('woff');
+
+  font-weight: 400;
+
+  font-style: normal;
+
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Roboto';
+
+  src: url('../fonts/roboto-bold.woff2') format('woff2'),
+         url('../fonts/roboto-bold.woff') format('woff');
+
+  font-weight: 700;
+
+  font-style: normal;
+
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Orbitron';
+
+  src: url('../fonts/orbitron-regular.woff2') format('woff2'),
+         url('../fonts/orbitron-regular.woff') format('woff');
+
+  font-weight: 400;
+
+  font-style: normal;
+
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Orbitron';
+
+  src: url('../fonts/orbitron-bold.woff2') format('woff2'),
+         url('../fonts/orbitron-bold.woff') format('woff');
+
+  font-weight: 700;
+
+  font-style: normal;
+
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+
+  src: url('../fonts/montserrat-regular.woff2') format('woff2'),
+         url('../fonts/montserrat-regular.woff') format('woff');
+
+  font-weight: 400;
+
+  font-style: normal;
+
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+
+  src: url('../fonts/montserrat-bold.woff2') format('woff2'),
+         url('../fonts/montserrat-bold.woff') format('woff');
+
+  font-weight: 700;
+
+  font-style: normal;
+
+  font-display: swap;
+}
 
 :root {
-  /* Colores de marca */
   --color-turquesa: #007BFF;
   --color-negro-profundo: #0D0D0D;
   --color-morado-neon: #9D4EDD;
@@ -3248,10 +3187,9 @@ blockquote {
   --rgb-turquesa: 0, 123, 255;
   --rgb-verde-neon: 0, 255, 153;
   --rgb-morado-neon: 157, 78, 221;
-  /* Tipografías */
-  --font-base: 'Roboto', sans-serif;
-  --font-titulos: 'Orbitron', sans-serif;
-  --font-subtitulo: 'Montserrat', sans-serif;
+  --font-base: 'Roboto';
+  --font-titulos: 'Orbitron';
+  --font-subtitulo: 'Montserrat';
   --font-code: "Fira Code", "Roboto Mono", monospace;
 }
 
@@ -3369,6 +3307,10 @@ blockquote {
 }
 
 @media (min-width: 640px) {
+  .sm\:w-auto {
+    width: auto;
+  }
+
   .sm\:min-w-\[48\%\] {
     min-width: 48%;
   }
@@ -3377,16 +3319,24 @@ blockquote {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .sm\:flex-row {
+    flex-direction: row;
+  }
+
+  .sm\:justify-center {
+    justify-content: center;
+  }
+
   .sm\:space-x-6 > :not([hidden]) ~ :not([hidden]) {
     --tw-space-x-reverse: 0;
     margin-right: calc(1.5rem * var(--tw-space-x-reverse));
     margin-left: calc(1.5rem * calc(1 - var(--tw-space-x-reverse)));
   }
 
-  .sm\:space-y-10 > :not([hidden]) ~ :not([hidden]) {
+  .sm\:space-y-0 > :not([hidden]) ~ :not([hidden]) {
     --tw-space-y-reverse: 0;
-    margin-top: calc(2.5rem * calc(1 - var(--tw-space-y-reverse)));
-    margin-bottom: calc(2.5rem * var(--tw-space-y-reverse));
+    margin-top: calc(0px * calc(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(0px * var(--tw-space-y-reverse));
   }
 
   .sm\:p-8 {
