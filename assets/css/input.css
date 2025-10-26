@@ -100,11 +100,11 @@
   /* SOLUCIÓN AL ERROR DE API OBSOLETA: Definir tamaños de fuente explícitos */
   h1 {
     font-family: var(--font-titulos);
-    font-size: 3rem; 
-    font-weight: 700;
-    line-height: 1.1; 
     margin-top: 2.5rem;
     margin-bottom: 1.5rem;
+    line-height: 1.1; 
+    font-weight: 700;
+    @apply text-5xl;
   }
   
   h2 {
