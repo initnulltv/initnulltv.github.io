@@ -147,6 +147,8 @@ GEM
       octokit (>= 4, < 7, != 4.4.0)
     jekyll-include-cache (0.2.1)
       jekyll (>= 3.7, < 5.0)
+    jekyll-locale (0.5.1)
+      jekyll (~> 3.8)
     jekyll-mentions (1.6.0)
       html-pipeline (~> 2.3)
       jekyll (>= 3.7, < 5.0)
@@ -283,7 +285,9 @@ DEPENDENCIES
   faraday-retry
   fiddle
   github-pages
+  jekyll
   jekyll-feed
+  jekyll-locale
   jekyll-seo-tag
   jekyll-sitemap
   tzinfo-data

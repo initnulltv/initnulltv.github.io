@@ -2,9 +2,9 @@
 layout: page
 title: "Comunidad"
 permalink: /comunidad
-description: "Únete a nuestra comunidad de emprendedores digitales. Comparte experiencias, aprende y participa activamente en InitNullTV."
+description: "Únete a nuestra comunidad de emprendedores digitales. Comparte experiencias, aprende y participa activamente."
 tags: [comunidad, emprendedores digitales, networking, InitNullTV]
-image: "/assets/img/pages/comunidad-emprendedores-initnulltv.png"
+image: "/assets/img/og/comunidad-emprendedores-initnulltv.jpg"
 ---
 
 {% include comunidad/redes-sociales.html %}

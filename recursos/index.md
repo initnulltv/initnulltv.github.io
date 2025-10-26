@@ -2,9 +2,9 @@
 layout: page
 title: "Recursos Digitales"
 permalink: /recursos
-description: "El lugar donde puedes encontrar productos, servicios y herramientas para iniciar tu negocio digital desde cero"
+description: "El lugar donde puedes encontrar productos, servicios y herramientas para iniciar tu negocio digital desde cero."
 tags: [servicios, productos, recursos, herramientas]
-image: "/assets/img/pages/productos-digitales-initnulltv.png"
+image: "/assets/img/og/productos-digitales-initnulltv.jpg"
 ---
 
 {% include recursos/kit.html %}

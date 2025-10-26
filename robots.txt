@@ -31,5 +31,11 @@ Disallow: /.sass-cache/
 Disallow: /vendor/
 Disallow: /.git/
 
+# Bloquear páginas internas en /recursos/
+Disallow: /recursos/los-3-pilares-de-tu-marca.html
+Disallow: /recursos/los-3-pilares-de-tu-marca/
+Disallow: /recursos/video-script-idea-ia-pro.html
+Disallow: /recursos/video-script-idea-ia-pro/
+
 # Ubicación del Sitemap
 Sitemap: /sitemap.xml

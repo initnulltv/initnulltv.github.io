@@ -1,10 +1,10 @@
 title: "InitNullTV - Negocios digitales"
-description: "Guía clara para principiantes no técnicos de Latinoamérica. Aprende a crear tu negocio digital real, sin humo ni promesas vacías."
+description: "Guía práctica para emprender desde cero y crear negocios digitales reales en Latinoamérica, sin humo ni falsas promesas."
 url: "https://initnulltv.com"
 baseurl: "" 
-language: "es"
+language: "es_ES"
 author: "InitNullTV"
-default_image: "/assets/img/initnulltv-default.jpg"
+default_image: "/assets/img/og/initnulltv-og.jpg"
 logo: "/assets/favicon/favicon-96x96.png"
 brand_color: "#007BFF"
 twitter_username: "@InitNullTV"
@@ -40,7 +40,7 @@ defaults:
       type: "posts"
     values:
       layout: post
-      image: "/assets/img/initnulltv-default.jpg"
+      image: "/assets/img/og/initnulltv-og.jpg"
   - scope:
       path: "proyecto"
     values:
@@ -65,17 +65,18 @@ defaults:
       path: ""
     values:
       layout: page
-      image: "/assets/img/initnulltv-default.jpg"
+      image: "/assets/img/og/initnulltv-og.jpg"
 
 markdown: kramdown
 highlighter: rouge
 permalink: /:categories/:title/
-timezone: America/Bogota
+timezone: America/Lima
 
 plugins:
   - jekyll-sitemap
   - jekyll-feed
   - jekyll-seo-tag
+  - jekyll-postcss
 
 paginate: 9
 paginate_path: "/blog/page:num"

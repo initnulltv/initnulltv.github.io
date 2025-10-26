@@ -26,9 +26,6 @@
   --font-code: "Fira Code", "Roboto Mono", monospace;
 }
 
-/* =========================================================
-   CAPA BASE
-   ========================================================= */
 @layer base {
   body {
     font-family: var(--font-base);
@@ -91,7 +88,6 @@
     background: linear-gradient(to right, var(--color-turquesa), var(--color-morado-neon));
   }
 
-  /* Fondo tipo InitNullTV */
   .hero-dark-tv {
     background-color: var(--color-negro-profundo);
     color: var(--color-gris-claro);

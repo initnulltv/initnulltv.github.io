@@ -5,6 +5,7 @@ gem "webrick"
 gem 'tzinfo-data'
 gem "fiddle"
 gem "faraday-retry" 
+gem "jekyll-locale"
 group :jekyll_plugins do
   gem "jekyll-feed" 
   gem "jekyll-sitemap"

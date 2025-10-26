@@ -7,8 +7,6 @@ tags: [initnulltv, negocio digital, emprendimiento, historia, aprendizaje]
 image: /assets/img/posts/hoy-10-10-nace-initnulltv.png
 ---
 
-## 💡 Cómo Nació InitNullTV
-
 Durante mucho tiempo pensé: “quiero empezar mi propio negocio digital”. Pero me sentía abrumado. Había demasiada información, gurús que solo muestran sus victorias y ninguna hoja de ruta clara para principiantes. Busqué en páginas web, vi cientos de videos, me suscribí a newsletters y seguí a expertos en Instagram y LinkedIn… todo en busca de cómo empezar desde cero.  
 
 Aun así, no encontraba un roadmap paso a paso: qué hacer primero, qué después, cómo avanzar sin perder tiempo. La frustración crecía, pero entendí que tenía que empezar de alguna manera.  
