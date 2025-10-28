@@ -20,10 +20,12 @@ jobs:
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: 3.2
+          bundler-cache: true
 
       - name: Install dependencies
         run: |
           gem install bundler
+          bundle config set --local path 'vendor/bundle'
           bundle install
           npm install
 
@@ -39,7 +41,7 @@ jobs:
           git merge origin/design --allow-unrelated-histories -m "Merge design branch into develop (temp build)"
 
       - name: Build Jekyll site
-        run: bundle exec jekyll build
+        run: bundle exec jekyll build --trace
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
