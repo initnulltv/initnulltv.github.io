@@ -1,22 +1,37 @@
-# Excluir la carpeta del sitio compilado
-_site/
+# ============================
+# 🧱 JEKYLL
+# ============================
+_site/                # Carpeta del sitio compilado (no subir a develop)
+.sass-cache/          # Caché de SASS
+.jekyll-cache/        # Caché de Jekyll
+.jekyll-metadata      # Metadata local
+Gemfile.lock~         # Archivos temporales de Bundler
+.bundle/              # Configuración local de Bundler
+vendor/               # Gems locales
 
-# Excluir archivos del sistema y de Bundler
-.sass-cache/
-.jekyll-cache/
-.jekyll-metadata
-.bundle/
-vendor/
-Gemfile.lock~
+# ============================
+# ⚙️ NODE / TAILWIND / POSTCSS
+# ============================
+node_modules/          # Dependencias de Node
+.postcss-cache/        # Caché de PostCSS
+.netlify/              # Configuración local de Netlify
+dist/                  # Carpeta de build alternativa (por si la generas manualmente)
+output.css.map         # Mapas de CSS (innecesarios en producción)
 
-# ----------------------------------------
-# EXCLUSIONES DE NODE.JS (TAILWIND/NPM)
-# ----------------------------------------
+# ============================
+# 🧰 SISTEMA Y EDITORES
+# ============================
+.DS_Store              # macOS
+Thumbs.db              # Windows
+*.log                  # Logs de errores
+*.tmp                  # Archivos temporales
+*.swp                  # Archivos de bloqueo de Vim
+*.bak                  # Archivos de respaldo
+.idea/                 # JetBrains
+.vscode/               # Configuración local de VS Code
 
-# 1. Dependencias de Node (No deben subirse a GitHub)
-node_modules/
-
-# 2. Archivos de compilación temporal o caché
-.postcss-cache
-# Local Netlify folder
-.netlify
+# ============================
+# 🚫 GITHUB ACTIONS (control interno)
+# ============================
+# Evitar subir artefactos o builds locales
+gh-pages/
