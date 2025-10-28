@@ -1,0 +1,34 @@
+- nombre: VSI Pro - Pack de 3 Guiones
+  descripcion: Me conecto contigo y generamos 3 ideas completas para tu canal usando VSI IA Pro, entregando los resultados listos para publicar.
+  enlace: /contacto/
+  color: morado-neon
+  icono: /assets/img/herramientas/herramienta-vsi-ia-pro.png
+  botontools: Contratar pack de 3 guiones →
+
+- nombre: Metricool
+  descripcion: Plataforma para programar y analizar tus redes sociales, planificando contenido y midiendo resultados.
+  enlace: hhttps://f.mtr.cool/IDGNRV
+  color: morado-neon
+  icono: /assets/img/herramientas/metricool.png
+  botontools: Ir a Metricool →
+
+- nombre: Notion
+  descripcion: Herramienta de productividad para organizar proyectos, tareas y bases de datos de manera visual.
+  enlace: https://www.notion.so/
+  color: morado-neon
+  icono: /assets/img/herramientas/notion.png
+  botontools: Ir a Notion →
+
+- nombre: Canva
+  descripcion: Plataforma de diseño gráfico para crear imágenes, miniaturas, presentaciones y contenido visual fácilmente.
+  enlace: https://www.canva.com/
+  color: morado-neon
+  icono: /assets/img/herramientas/canva.png
+  botontools: Ir a Canva →
+
+- nombre: ChatGPT
+  descripcion: Herramienta de inteligencia artificial para generar texto, guiones y contenido creativo automáticamente.
+  enlace: https://chatgpt.com/
+  color: morado-neon
+  icono: /assets/img/herramientas/chatgpt.png
+  botontools: Ir a ChatGPT →

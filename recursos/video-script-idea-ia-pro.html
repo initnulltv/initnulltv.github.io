@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Video Script Idea IA Pro (VSI) | InitNullTV</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'turquesa': '#40E0D0',
+          }
+        }
+      }
+    }
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@400;700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body class="bg-[#0D0D0D] text-white font-sans">
+
+  <!-- BLOQUEO: LOGIN -->
+  <div id="login-container" class="flex flex-col items-center justify-center min-h-screen bg-gray-900 p-4">
+    <h1 class="text-3xl font-bold text-turquesa mb-4">Acceso a la Herramienta IA</h1>
+    <p class="text-gray-400 mb-6">Por favor, introduce tu clave de acceso para continuar.</p>
+    <form id="login-form" class="w-full max-w-sm">
+      <input type="password" id="access-key-input" class="w-full p-3 bg-gray-800 border border-gray-700 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-turquesa" placeholder="Tu clave de acceso">
+      <button type="submit" class="w-full mt-4 cta-neon-green px-4 py-2">Desbloquear</button>
+      <p id="error-message" class="text-red-500 text-center mt-4 hidden"></p>
+    </form>
+  </div>
+
+  <!-- CONTENIDO OCULTO -->
+  <div id="content-container" class="hidden">
+    <div class="max-w-4xl mx-auto p-4 bg-black rounded-xl border border-gray-800 shadow-2xl">
+      <h1 class="text-3xl md:text-5xl text-center mb-2 logo-text brand-gradient-text">
+        Video Script Idea IA Pro
+      </h1>
+      <p class="text-center text-sm md:text-lg mb-8 text-gray-400 font-subtitulo">
+        Elimina el bloqueo creativo. Genera títulos virales, SEO y guiones estructurados en 3 minutos.
+      </p>
+
+      <!-- Loader -->
+      <div id="loadingIndicator" class="hidden text-center p-4 my-4 rounded-lg" style="background-color: rgba(0, 123, 255, 0.2);">
+        <div class="brand-gradient-text text-xl animate-pulse font-titulos">
+          IA Trabajando... ¡Generando tu plan de batalla!
+        </div>
+      </div>
+
+      <!-- PASO 1 -->
+      <div id="step1" class="step-content">
+        <h2 class="text-2xl font-titulos text-turquesa mb-4">Paso 1: La Idea y la Audiencia (Validación)</h2>
+        <div class="mb-4">
+          <label for="videoIdea" class="block mb-2 text-sm font-subtitulo">1. Describe tu idea inicial (Sé específico):</label>
+          <textarea id="videoIdea" rows="3" class="w-full p-3 rounded-lg bg-gray-900 border border-gray-700 text-gray-100 focus:ring-turquesa focus:border-turquesa transition duration-150" placeholder="Ej: Guía para empezar en los negocios digitales desde cero sin presupuesto."></textarea>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-4 mb-4">
+          <div>
+            <label for="videoFormat" class="block mb-2 text-sm font-subtitulo">2. Formato de Video:</label>
+            <select id="videoFormat" class="w-full p-3 rounded-lg bg-gray-900 border border-gray-700 text-gray-100 focus:ring-turquesa focus:border-turquesa transition duration-150">
+              <option value="Shorts (60s)">Shorts (60s)</option>
+              <option value="Video Largo (5-15 min)">Video Largo (5-15 min)</option>
+              <option value="Reel/TikTok (30s)">Reel/TikTok (30s)</option>
+            </select>
+          </div>
+          <div>
+            <label for="audienceDefined" class="block mb-2 text-sm font-subtitulo">3. ¿Tienes tu público objetivo definido?</label>
+            <select id="audienceDefined" class="w-full p-3 rounded-lg bg-gray-900 border border-gray-700 text-gray-100 focus:ring-turquesa focus:border-turquesa transition duration-150">
+              <option value="No">No (Necesito ayuda)</option>
+              <option value="Si">Sí (Lo describiré)</option>
+            </select>
+          </div>
+        </div>
+
+        <div id="audienceInputContainer" class="mb-6 hidden">
+          <label for="audienceDescription" class="block mb-2 text-sm font-subtitulo">4. Describe a tu audiencia (Edad, Frustración, Objetivo):</label>
+          <input type="text" id="audienceDescription" class="w-full p-3 rounded-lg bg-gray-900 border border-gray-700 text-gray-100 focus:ring-turquesa focus:border-turquesa transition duration-150" placeholder="Ej: Principiantes latinos de 25-35 años, frustrados por los 'gurús', buscan su primer ingreso online.">
+        </div>
+
+        <div id="audienceTip" class="admonition-tip hidden">
+          <p><strong>🚨 ¡Admonition Tip!</strong></p>
+          <p>Si respondiste 'No', te recordamos: ¡Define tu nicho! Es la clave para que la IA genere títulos que <span class="text-turquesa font-titulos">CONECTEN</span>.</p>
+        </div>
+
+        <button onclick="nextStep(2)" id="btnStep1" class="cta-neon-green w-full mt-4">
+          ¡Generar Títulos Virales!
+        </button>
+      </div>
+
+      <!-- PASO 2 -->
+      <div id="step2" class="step-content hidden">
+        <h2 class="text-2xl font-titulos text-turquesa mb-4">Paso 2: Títulos de Alto Clic y SEO</h2>
+        <div id="titleOptions" class="space-y-4 mb-6"></div>
+        <div class="mb-4">
+          <label for="finalTitle" class="block mb-2 text-sm font-subtitulo">Título Final:</label>
+          <input type="text" id="finalTitle" class="w-full p-3 rounded-lg bg-gray-900 border border-gray-700 text-gray-100 focus:ring-turquesa focus:border-turquesa transition duration-150">
+        </div>
+
+        <div class="progress-card p-4 rounded-xl shadow-lg mb-6">
+          <div class="space-y-3">
+            <div class="progress-header">
+              <h4 class="text-sm font-subtitulo">SEO Semántico</h4>
+              <span id="seoScoreText" class="text-sm font-titulos text-turquesa">--/100</span>
+            </div>
+            <div class="progress-bar-container">
+              <div id="seoProgressBar" class="progress-bar" style="width: 0%;"></div>
+            </div>
+            <div class="progress-header pt-3">
+              <h4 class="text-sm font-subtitulo">Clic Emocional</h4>
+              <span id="clickScoreText" class="text-sm font-titulos text-morado-neon">--/100</span>
+            </div>
+            <div class="progress-bar-container">
+              <div id="clickProgressBar" class="progress-bar" style="width: 0%;"></div>
+            </div>
+          </div>
+        </div>
+
+        <button onclick="nextStep(3)" class="cta-neon-green w-full mt-4">
+          Continuar al Guion
+        </button>
+      </div>
+
+      <!-- PASO 3 y 4 -->
+      <div id="step3" class="step-content hidden">
+        <h2 class="text-2xl font-titulos text-turquesa mb-4">Paso 3 & 4: Guía de Contenido</h2>
+        <div id="checklistMenu" class="space-y-3 mb-6">
+          <button data-task="script" class="checklist-item cta-secondary-purple w-full p-3 rounded-lg text-left bg-gray-900 border border-gray-700">✅ Generar Guion</button>
+          <button data-task="description" class="checklist-item cta-secondary-purple w-full p-3 rounded-lg text-left bg-gray-900 border border-gray-700">✅ Generar Descripción</button>
+          <button data-task="tags" class="checklist-item cta-secondary-purple w-full p-3 rounded-lg text-left bg-gray-900 border border-gray-700">✅ Generar Etiquetas</button>
+          <button data-task="thumbnail" class="checklist-item cta-secondary-purple w-full p-3 rounded-lg text-left bg-gray-900 border border-gray-700">✅ Ideas de Miniatura</button>
+        </div>
+        <div id="outputContainer" class="space-y-6"></div>
+        <button onclick="nextStep(5)" id="btnStep4" class="cta-neon-green w-full mt-8">
+          ¡Generar Plan Final!
+        </button>
+      </div>
+
+      <!-- PASO 5 -->
+      <div id="step5" class="step-content hidden">
+        <h2 class="text-2xl font-titulos text-turquesa mb-4">Paso 5: Plan de Batalla Final</h2>
+        <div class="p-6 rounded-xl bg-gray-900 border border-verde-neon/50 mb-6">
+          <h3 class="text-xl font-titulos text-verde-neon mb-4">Documento Final</h3>
+          <textarea id="finalSummary" rows="20" readonly class="w-full p-3 rounded-lg bg-black text-gray-100 border border-gray-700 resize-none"></textarea>
+          <button onclick="copyToClipboard('finalSummary')" class="cta-neon-green w-full mt-4 text-sm md:text-base">
+            Copiar Plan
+          </button>
+        </div>
+      </div>
+
+      <!-- Mensaje flotante -->
+      <div id="messageBox" class="fixed inset-0 bg-black bg-opacity-70 z-50 hidden items-center justify-center">
+        <div class="bg-gray-800 p-6 rounded-xl border-t-4 border-turquesa max-w-sm w-full text-center shadow-2xl">
+          <h3 id="messageTitle" class="text-xl font-titulos mb-3 text-turquesa"></h3>
+          <p id="messageBody" class="mb-4 text-gray-300"></p>
+          <button onclick="hideMessageBox()" class="cta-neon-green px-4 py-2 text-sm">Entendido</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script type="module" src="/assets/js/firebase-init.js"></script>
+  <script src="/assets/js/main-app-ia.js"></script>
+
+</body>
+</html>

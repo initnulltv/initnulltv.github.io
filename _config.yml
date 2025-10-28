@@ -1,0 +1,105 @@
+# Configuración general
+title: "InitNullTV - Negocios digitales"
+description: "Guía práctica para emprender desde cero y crear negocios digitales reales en Latinoamérica, sin humo ni falsas promesas."
+url: "https://initnulltv.com"
+baseurl: "" 
+language: "es"
+author: "InitNullTV"
+default_image: "/assets/img/og/initnulltv-og.jpg"
+logo: "/assets/favicon/favicon-96x96.png"
+brand_color: "#007BFF"
+twitter_username: "@InitNullTV"
+timezone: "America/Lima"
+
+# Redes y enlaces
+links:
+  youtube: "https://www.youtube.com/@InitNullTV"
+  instagram: "https://instagram.com/initnulltv"
+  tiktok: "https://tiktok.com/@initnulltv"
+  twitter: "https://x.com/initnulltv"
+  bluesky: "https://bsky.app/profile/initnulltv.com"
+  linkedin_company: "https://www.linkedin.com/company/initnulltv"
+  linkedin: "https://www.linkedin.com/in/wuilmerbolivar/"
+  github: "https://github.com/initnulltv"
+  patreon: "https://www.patreon.com/c/InitNullTV"
+  whatsapp_channel: "https://whatsapp.com/channel/0029VbBFbf8KwqSQ2QjoVE2y"
+  whatsapp_community: "https://chat.whatsapp.com/GXplv2gYMZP3sVUobdrVBN"
+  telegram_channel: "https://t.me/initnulltv"
+  telegram_group: "https://t.me/+oD-3607T9iliOTM5"
+  discord_group: "https://discord.gg/Jg6aGhcnU6"
+
+# Colecciones
+collections:
+  proyecto:
+    output: true
+  comunidad:
+    output: true
+  recursos:
+    output: true
+  contacto:
+    output: true
+
+# Valores por defecto (layouts, imagenes, etc)
+defaults:
+  # Posts en _posts/
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: post
+      image: "/assets/img/og/initnulltv-og.jpg"
+
+  # Colecciones
+  - scope:
+      path: "proyecto"
+    values:
+      layout: section
+  - scope:
+      path: "comunidad"
+    values:
+      layout: section
+  - scope:
+      path: "recursos"
+    values:
+      layout: section
+  - scope:
+      path: "contacto"
+    values:
+      layout: section
+
+  # Páginas generales
+  - scope:
+      path: ""
+    values:
+      layout: page
+      image: "/assets/img/og/initnulltv-og.jpg"
+
+# Markdown y resaltador
+markdown: kramdown
+highlighter: rouge
+permalink: /blog/:title/
+
+# Plugins Jekyll 4.4.1
+plugins:
+  - jekyll-sitemap
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-paginate
+  - jekyll-minifier
+  - jekyll-postcss-v2
+
+# Archivos y carpetas a excluir del build
+exclude:
+  - vendor/
+  - "/recursos/los-3-pilares-de-tu-marca.html"
+  - "/recursos/video-script-idea-ia-pro.html"
+
+# Configuración de jekyll-postcss para Windows
+postcss:
+  executable: ./node_modules/.bin/postcss.cmd
+  script: node_modules/.bin/postcss
+  config: postcss.config.js
+
+# Paginación de blog
+paginate: 6
+paginate_path: "/blog/page:num"

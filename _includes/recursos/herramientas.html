@@ -1,0 +1,34 @@
+<section id="herramientas" class="py-16 sm:py-24 bg-slate-900 text-white">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+    <h2 class="text-3xl sm:text-4xl font-bold logo-text text-morado-neon mb-10 text-center">
+      ⚙️ Herramientas
+    </h2>
+    <p class="text-center subtitle text-slate-400 mb-10">
+      Solo recomiendo lo que realmente uso para construir InitNullTV.
+    </p>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      {% for h in site.data.herramientas %}
+      <div class="bg-slate-800 p-6 rounded-xl shadow-2xl border border-[var(--color-{{ h.color }})]
+                  hover:ring-2 hover:ring-[var(--color-{{ h.color }})]
+                  hover:shadow-[var(--color-{{ h.color }}]]/50
+                  transition-all duration-300">
+
+        {% if h.icono %}
+        <img src="{{ h.icono }}" alt="{{ h.nombre }}" 
+             class="w-full h-48 object-cover rounded-lg mb-4
+                    transform transition-transform duration-300 hover:scale-105">
+        {% endif %}
+
+        <h3 class="logo-text text-xl mb-2 text-{{ h.color }}">{{ h.nombre }}</h3>
+        <p class="text-gris-claro mb-4 text-sm">{{ h.descripcion }}</p>
+        <a href="{{ h.enlace }}" target="_blank" 
+           class="inline-flex items-center text-{{ h.color }} hover:underline font-semibold text-sm
+                  transition-all duration-300 hover:-translate-y-1">
+          {{ h.botontools | default: "Ir al sitio →" }}
+        </a>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
