@@ -1,0 +1,51 @@
+<section id="sitios-recomendados" class="py-10 md:py-16">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 mb-10 text-center">
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold mt-3 brand-gradient-text">
+            Recursos que Recomendamos
+        </h2>
+        <p class="subtitle text-xl font-normal text-gray-400 mt-4">
+            Sitios, canales y herramientas que personalmente me han ayudado a crecer.
+        </p>
+    </div>
+
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            
+            {% assign recomendaciones = site.data.sitios_recomendados.recomendaciones %}
+            
+            {% for sitio in recomendaciones %}
+                
+                <article class="bg-slate-800 rounded-2xl shadow-xl hover:shadow-2xl transition-shadow duration-300 border border-slate-700 hover:border-[#007BFF]/50">
+                    
+                    {% comment %} La parte de la imagen/logo ha sido eliminada. {% endcomment %}
+
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-white mb-2">
+                            <a href="{{ sitio.url }}" target="_blank" rel="noopener noreferrer" class="hover:text-[#007BFF] transition-colors font-titulos">
+                                {{ sitio.title }}
+                            </a>
+                        </h3>
+                        
+                        <div class="flex flex-wrap gap-2 text-xs mb-4">
+                            {% for tag in sitio.etiquetas %}
+                                <span class="bg-slate-700 text-slate-300 px-2 py-0.5 rounded-full font-subtitulo">
+                                    {{ tag }}
+                                </span>
+                            {% endfor %}
+                        </div>
+
+                        <p class="text-slate-300 text-sm mb-4">
+                            {{ sitio.description }}
+                        </p>
+                        
+                        <a href="{{ sitio.url }}" target="_blank" rel="noopener noreferrer" class="inline-block mt-2 text-morado-neon text-sm font-medium hover:underline font-subtitulo hover:text-[#007BFF] transition-colors">
+                            Visitar sitio →
+                        </a>
+                    </div>
+                </article>
+                
+            {% endfor %}
+
+        </div>
+    </div>
+</section>

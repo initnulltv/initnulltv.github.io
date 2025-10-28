@@ -77,7 +77,7 @@ defaults:
 # Markdown y resaltador
 markdown: kramdown
 highlighter: rouge
-permalink: /:categories/:title/
+permalink: /blog/:title/
 
 # Plugins Jekyll 4.4.1
 plugins:
@@ -85,12 +85,20 @@ plugins:
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-paginate
+  - jekyll-minifier
+  - jekyll-postcss-v2
 
 # Archivos y carpetas a excluir del build
 exclude:
   - vendor/
   - "/recursos/los-3-pilares-de-tu-marca.html"
   - "/recursos/video-script-idea-ia-pro.html"
+
+# Configuración de jekyll-postcss para Windows
+postcss:
+  executable: ./node_modules/.bin/postcss.cmd
+  script: node_modules/.bin/postcss
+  config: postcss.config.js
 
 # Paginación de blog
 paginate: 6

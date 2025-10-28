@@ -18,3 +18,5 @@ node_modules/
 
 # 2. Archivos de compilación temporal o caché
 .postcss-cache
+# Local Netlify folder
+.netlify

@@ -61,7 +61,7 @@ Lo hice pensando en **creadores y emprendedores digitales** que, como yo, buscan
 <div style="background-color:#0D0D0D; border:1px solid #17A2B8; border-radius:16px; padding:24px; display:flex; align-items:center; gap:20px; flex-wrap:wrap; margin:24px 0;">
 
   <div style="flex:0 0 140px;">
-    <img src="/assets/img/productos/producto-vsi-id-pro.png" alt="VSI IA Pro" style="width:140px; border-radius:12px;">
+    <img src="/assets/img/productos/producto-vsi-id-pro.png" alt="Logo del producto VSI IA Pro, un asistente de inteligencia artificial para crear videos virales." style="width:140px; border-radius:12px;">
   </div>
 
   <div style="flex:1;">

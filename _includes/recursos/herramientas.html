@@ -9,15 +9,22 @@
 
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
       {% for h in site.data.herramientas %}
-      <div class="bg-fondo-oscuro-suave p-6 rounded-xl shadow-lg border-t-4 border-[var(--color-{{ h.color }})] hover:shadow-[var(--color-{{ h.color }})]/40 transition">
+      <div class="bg-slate-800 p-6 rounded-xl shadow-2xl border border-[var(--color-{{ h.color }})]
+                  hover:ring-2 hover:ring-[var(--color-{{ h.color }})]
+                  hover:shadow-[var(--color-{{ h.color }}]]/50
+                  transition-all duration-300">
 
         {% if h.icono %}
-        <img src="{{ h.icono }}" alt="{{ h.nombre }}" class="w-full h-48 object-cover rounded-lg mb-4">
+        <img src="{{ h.icono }}" alt="{{ h.nombre }}" 
+             class="w-full h-48 object-cover rounded-lg mb-4
+                    transform transition-transform duration-300 hover:scale-105">
         {% endif %}
 
         <h3 class="logo-text text-xl mb-2 text-{{ h.color }}">{{ h.nombre }}</h3>
         <p class="text-gris-claro mb-4 text-sm">{{ h.descripcion }}</p>
-        <a href="{{ h.enlace }}" target="_blank" class="text-{{ h.color }} hover:underline font-semibold text-sm">
+        <a href="{{ h.enlace }}" target="_blank" 
+           class="inline-flex items-center text-{{ h.color }} hover:underline font-semibold text-sm
+                  transition-all duration-300 hover:-translate-y-1">
           {{ h.botontools | default: "Ir al sitio →" }}
         </a>
       </div>

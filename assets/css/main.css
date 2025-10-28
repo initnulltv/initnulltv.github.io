@@ -104,7 +104,7 @@
     margin-bottom: 1.5rem;
     line-height: 1.1; 
     font-weight: 700;
-    @apply text-5xl;
+    font-size: 3rem; /* Equivalente a text-5xl */
   }
   
   h2 {
@@ -163,12 +163,12 @@
   .text-morado-neon { color: var(--color-morado-neon); }
   .text-verde-neon { color: var(--color-verde-neon); }
   
+  /* Corregir el error de text-fill-color */
   .brand-gradient-text-404 {
     background: linear-gradient(90deg, var(--color-turquesa), var(--color-morado-neon));
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
     background-clip: text;
-    text-fill-color: transparent;
+    color: transparent;
   }
 
   .brand-gradient-text {
@@ -191,12 +191,25 @@
 
   /* Línea divisora de marca */
   .hr-brand {
-    @apply my-20 border-t border-[#007BFF]/30;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    border-top-width: 1px;
+    border-color: rgba(0, 123, 255, 0.3);
   }
 
   .cta-group {
-    @apply flex flex-col items-center space-y-4;
-    @apply sm:flex-row sm:justify-center sm:space-y-0 sm:gap-6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  @media (min-width: 640px) {
+    .cta-group {
+      flex-direction: row;
+      justify-content: center;
+      gap: 1.5rem;
+    }
   }
 }
 
@@ -268,6 +281,48 @@
     color: var(--color-morado-neon);
     font-family: var(--font-titulos);
     font-weight: 700;
+  }
+
+  /* ENLACES DEL FOOTER */
+  .footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.125rem; /* Reducido aún más */
+  }
+
+  .footer-links li {
+    display: flex;
+    align-items: center;
+  }
+
+  .footer-links li a {
+    color: var(--color-gris-claro);
+    opacity: 0.7;
+    padding: 0.125rem 0.25rem;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    font-size: 0.75rem;
+    white-space: nowrap;
+  }
+
+  .footer-links li a:hover {
+    opacity: 1;
+    color: var(--color-turquesa);
+    background-color: rgba(0, 123, 255, 0.1);
+    transform: translateY(-1px);
+  }
+
+  .footer-links li::after {
+    content: '•';
+    margin: 0 0.125rem;
+    color: var(--color-morado-neon);
+    opacity: 0.3;
+    font-size: 0.625rem;
+  }
+
+  .footer-links li:last-child::after {
+    display: none;
   }
 }
 
@@ -468,4 +523,42 @@
     text-decoration: underline;
     color: var(--color-morado-neon);
   }
+}
+
+/* -------------------------------------- */
+/* 5. NAVEGACIÓN SECUNDARIA (Footer)     */
+/* -------------------------------------- */
+
+nav[aria-label="Navegación secundaria"] {
+  margin-bottom: 1rem;
+}
+
+nav[aria-label="Navegación secundaria"] ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.25rem;
+  margin-bottom: 0.5rem;
+}
+
+@media (min-width: 768px) {
+  nav[aria-label="Navegación secundaria"] ul {
+    justify-content: flex-end;
+  }
+}
+
+nav[aria-label="Navegación secundaria"] li {
+  display: inline-block;
+}
+
+nav[aria-label="Navegación secundaria"] a {
+  font-size: 0.875rem;
+  color: var(--color-gris-claro);
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
+}
+
+nav[aria-label="Navegación secundaria"] a:hover {
+  color: var(--color-turquesa);
 }

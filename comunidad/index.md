@@ -9,3 +9,4 @@ image: "/assets/img/og/comunidad-emprendedores-initnulltv.jpg"
 
 {% include comunidad/redes-sociales.html %}
 {% include comunidad/opiniones.html %}
+{% include comunidad/recomendados.html %}
