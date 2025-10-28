@@ -1,27 +1,30 @@
 name: Build and Deploy Jekyll site
 
+# 🚀 Solo se ejecuta al hacer push en la rama 'develop'
 on:
   push:
     branches:
       - develop
-      - design
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
+      # 🔹 1. Clonar el repositorio completo (todas las ramas)
       - name: Checkout repository
         uses: actions/checkout@v3
         with:
           fetch-depth: 0
 
+      # 🔹 2. Configurar Ruby
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: 3.2
           bundler-cache: false
 
+      # 🔹 3. Instalar dependencias Ruby + Node
       - name: Install dependencies
         run: |
           gem install bundler
@@ -31,20 +34,17 @@ jobs:
           bundle install
           npm install
 
+      # 🔹 4. Configurar identidad de Git (para despliegue)
       - name: Configure Git identity
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
 
-      - name: Merge design into develop (temporal)
-        if: github.ref == 'refs/heads/develop'
-        run: |
-          git fetch origin design
-          git merge origin/design --allow-unrelated-histories -m "Merge design branch into develop (temp build)"
-
+      # 🔹 5. Compilar el sitio Jekyll
       - name: Build Jekyll site
         run: bundle exec jekyll build --trace
 
+      # 🔹 6. Desplegar el contenido de _site al branch 'gh-pages'
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
