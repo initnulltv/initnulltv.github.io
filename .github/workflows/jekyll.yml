@@ -24,7 +24,6 @@ jobs:
 
       - name: Install dependencies
         run: |
-          # Asegura entorno compatible con GitHub Actions (Linux)
           bundle config set --local deployment false
           bundle config set frozen false
           bundle config set path 'vendor/bundle'
