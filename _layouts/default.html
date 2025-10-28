@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    {% include head.html %}
+  </head>
+
+  <body class="bg-[#0D0D0D] text-white font-sans">
+    {% include header.html %}
+    
+    <main>
+      {{ content }}
+    </main>
+
+    {% include footer.html %}
+
+<script src="{{ '/assets/js/main.js' | relative_url }}" defer></script>
+
+</body>
+</html>
+

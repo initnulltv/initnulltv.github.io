@@ -1,0 +1,31 @@
+<section id="servicios" class="py-20 bg-[#121212]">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+    <h2 class="text-3xl sm:text-4xl font-bold logo-text text-verde-neon mb-10 text-center">
+      ♾️ Servicios
+    </h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      {% for s in site.data.servicios %}
+      <div class="bg-slate-800 p-6 rounded-xl shadow-2xl border border-[var(--color-{{ s.color }})] 
+                  hover:ring-2 hover:ring-[var(--color-{{ s.color }})] 
+                  hover:shadow-[var(--color-{{ s.color }}]]/50 
+                  transition-all duration-300">
+
+        {% if s.icono %}
+        <img src="{{ s.icono }}" alt="{{ s.nombre }}" 
+             class="w-full h-48 object-cover rounded-lg mb-4 
+                    transform transition-transform duration-300 hover:scale-105">
+        {% endif %}
+
+        <h3 class="logo-text text-xl mb-2 text-{{ s.color }}">{{ s.nombre }}</h3>
+        <p class="text-gris-claro mb-4 text-sm">{{ s.descripcion }}</p>
+        <a href="{{ s.enlace }}" target="_blank" 
+           class="inline-flex items-center text-{{ s.color }} hover:underline font-semibold text-sm
+                  transition-all duration-300 hover:-translate-y-1">
+          {{ s.botonserv | default: "Más información →" }}
+        </a>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
