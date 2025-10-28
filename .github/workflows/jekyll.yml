@@ -20,13 +20,13 @@ jobs:
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: 3.2
-          bundler-cache: true
+          bundler-cache: false
 
       - name: Install dependencies
         run: |
+          gem install bundler
           bundle config set --local deployment false
           bundle config set frozen false
-          bundle config set path 'vendor/bundle'
           bundle lock --add-platform x86_64-linux
           bundle install
           npm install
