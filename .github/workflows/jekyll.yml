@@ -24,8 +24,11 @@ jobs:
 
       - name: Install dependencies
         run: |
-          gem install bundler
-          bundle config set --local path 'vendor/bundle'
+          # Asegura entorno compatible con GitHub Actions (Linux)
+          bundle config set --local deployment false
+          bundle config set frozen false
+          bundle config set path 'vendor/bundle'
+          bundle lock --add-platform x86_64-linux
           bundle install
           npm install
 
