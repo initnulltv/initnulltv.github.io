@@ -1,0 +1,79 @@
+##############################################################
+# 🌐 InitNullTV — Configuración de Git para line endings (EOL)
+# ------------------------------------------------------------
+# Este archivo asegura consistencia entre Windows y Linux.
+# Todos los archivos se guardan en formato LF, el estándar en
+# servidores Linux y GitHub Actions.
+##############################################################
+
+# 🔹 Regla global: todos los archivos de texto usarán LF
+* text=auto eol=lf
+
+##############################################################
+# 📦 Lenguajes y formatos comunes
+##############################################################
+
+# Código y configuración
+*.html text eol=lf
+*.htm text eol=lf
+*.css text eol=lf
+*.scss text eol=lf
+*.js text eol=lf
+*.ts text eol=lf
+*.json text eol=lf
+*.yaml text eol=lf
+*.yml text eol=lf
+*.xml text eol=lf
+*.md text eol=lf
+*.markdown text eol=lf
+*.txt text eol=lf
+*.csv text eol=lf
+*.lock text eol=lf
+*.toml text eol=lf
+*.rb text eol=lf
+*.sh text eol=lf
+*.env text eol=lf
+*.gitattributes text eol=lf
+*.gitignore text eol=lf
+
+##############################################################
+# 🧱 Archivos de configuración Jekyll / Bundler / Node
+##############################################################
+Gemfile text eol=lf
+Gemfile.lock text eol=lf
+_config.yml text eol=lf
+package.json text eol=lf
+package-lock.json text eol=lf
+postcss.config.js text eol=lf
+tailwind.config.js text eol=lf
+
+##############################################################
+# 🖼️ Archivos binarios o de medios (no modificar EOL)
+##############################################################
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.svg binary
+*.ico binary
+*.webp binary
+*.mp4 binary
+*.mov binary
+*.mp3 binary
+*.woff binary
+*.woff2 binary
+*.ttf binary
+*.otf binary
+*.zip binary
+*.gz binary
+*.pdf binary
+
+##############################################################
+# 🧰 Configuración de GitHub Actions / CI
+##############################################################
+.github/** text eol=lf
+*.workflow text eol=lf
+
+##############################################################
+# ✅ Fin del archivo .gitattributes
+##############################################################
