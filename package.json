@@ -5,17 +5,16 @@
   "scripts": {
     "start": "bundle exec jekyll serve --livereload",
     "serve": "bundle exec jekyll serve --livereload",
-    "build": "bundle exec jekyll build",
     "build:css": "tailwindcss -i ./assets/css/main.css -o ./assets/css/output.css --minify",
+    "build": "npm run build:css && bundle exec jekyll build",
     "watch:css": "tailwindcss -i ./assets/css/main.css -o ./assets/css/output.css --watch",
-    "dev": "concurrently \"npm run serve\" \"npm run watch:css\"",
-    "prod": "npm run build:css && set JEKYLL_ENV=production && bundle exec jekyll serve --no-watch"
+    "dev": "concurrently \"bundle exec jekyll serve --livereload\" \"tailwindcss -i ./assets/css/main.css -o ./assets/css/output.css --watch\""
   },
   "devDependencies": {
     "autoprefixer": "^10.4.16",
     "concurrently": "^8.2.2",
     "postcss": "^8.4.31",
-    "tailwindcss": "^3.3.5",
-    "serve": "^14.2.1"
+    "serve": "^14.2.1",
+    "tailwindcss": "^3.3.5"
   }
 }

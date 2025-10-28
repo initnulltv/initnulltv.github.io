@@ -1,15 +1,12 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    './_includes/**/*.html',
-    './_layouts/**/*.html',
+    './_includes/**/*.{html,js}',
+    './_layouts/**/*.{html,js}',
     './_posts/**/*.{md,html}',
-    './**/*.html',
-    './assets/js/**/*.js'
-  ],
-  safelist: [
-    { pattern: /^(text|bg|border|ring)-/ },
-    'text-turquesa','text-morado-neon','text-verde-neon','text-gris-claro'
+    './recursos/**/*.{html,js}',
+    './assets/js/**/*.js',
+    './*.{html,md}'
   ],
   theme: {
     extend: {
@@ -23,4 +20,4 @@ module.exports = {
     }
   },
   plugins: []
-}
+};
