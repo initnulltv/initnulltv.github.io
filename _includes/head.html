@@ -12,8 +12,8 @@
 <meta name="keywords" content="{{ page.tags | join: ', ' }}">
 
 {% if page.image %}
-  <meta property="og:image" content="{{ site.url }}{{ page.image | relative_url }}">
-  <meta name="twitter:image" content="{{ site.url }}{{ page.image | relative_url }}">
+  <meta property="og:image" content="{{ site.url }}{{ page.image | absolute_url }}">
+  <meta name="twitter:image" content="{{ site.url }}{{ page.image | absolute_url }}">
 {% else %}
   <meta property="og:image" content="{{ site.url }}/assets/img/og/initnulltv-og.jpg">
   <meta name="twitter:image" content="{{ site.url }}/assets/img/og/initnulltv-og.jpg">
@@ -23,23 +23,23 @@
 <meta name="twitter:site" content="@InitNullTV">
 <meta name="twitter:creator" content="@InitNullTV">
 
-<link rel="apple-touch-icon" sizes="57x57" href="{{ '/assets/favicon/apple-icon-57x57.png' | relative_url }}">
-<link rel="icon" type="image/png" sizes="16x16" href="{{ '/assets/favicon/favicon-16x16.png' | relative_url }}">
-<link rel="manifest" href="{{ '/assets/favicon/manifest.json' | relative_url }}">
+<link rel="apple-touch-icon" sizes="57x57" href="{{ '/assets/favicon/apple-icon-57x57.png' | absolute_url }}">
+<link rel="icon" type="image/png" sizes="16x16" href="{{ '/assets/favicon/favicon-16x16.png' | absolute_url }}">
+<link rel="manifest" href="{{ '/assets/favicon/manifest.json' | absolute_url }}">
 <meta name="msapplication-TileColor" content="#007BFF">
 
 <link rel="preconnect" href="https://cdnjs.cloudflare.com">
-<link rel="preload" href="{{ '/assets/css/output.css' | relative_url }}" as="style" onload="this.rel='stylesheet'">
-<noscript><link rel="stylesheet" href="{{ '/assets/css/output.css' | relative_url }}"></noscript>
-<link rel="stylesheet" href="{{ '/assets/css/output.css' | relative_url }}" crossorigin="anonymous">
+<link rel="preload" href="{{ '/assets/css/output.css' | absolute_url }}" as="style" onload="this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="{{ '/assets/css/output.css' | absolute_url }}"></noscript>
+<link rel="stylesheet" href="{{ '/assets/css/output.css' | absolute_url }}" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
 
-<link rel="preload" href="{{ '/assets/fonts/roboto-regular.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="{{ '/assets/fonts/orbitron-regular.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="{{ '/assets/fonts/roboto-regular.woff2' | absolute_url }}" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="{{ '/assets/fonts/orbitron-regular.woff2' | absolute_url }}" as="font" type="font/woff2" crossorigin>
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>
 
-<link rel="sitemap" type="application/xml" title="Sitemap" href="{{ '/sitemap_main.xml' | relative_url }}">
+<link rel="sitemap" type="application/xml" title="Sitemap" href="{{ '/sitemap_main.xml' | absolute_url}}">
 
 <script>function loadScript(a){var b=document.getElementsByTagName("head")[0],c=document.createElement("script");c.type="text/javascript",c.src="https://tracker.metricool.com/resources/be.js",c.onreadystatechange=a,c.onload=a,b.appendChild(c)}loadScript(function(){beTracker.t({hash:"e8bdd9b6369b9ab98ff479f19247b81d"})});</script>
 

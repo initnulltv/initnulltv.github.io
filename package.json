@@ -11,10 +11,10 @@
     "dev": "concurrently \"bundle exec jekyll serve --livereload\" \"tailwindcss -i ./assets/css/main.css -o ./assets/css/output.css --watch\""
   },
   "devDependencies": {
-    "autoprefixer": "^10.4.16",
+    "autoprefixer": "^10.4.21",
     "concurrently": "^8.2.2",
-    "postcss": "^8.4.31",
+    "postcss": "^8.5.6",
     "serve": "^14.2.1",
-    "tailwindcss": "^3.3.5"
+    "tailwindcss": "^3.4.18"
   }
 }

@@ -4,7 +4,12 @@ module.exports = {
     './_includes/**/*.{html,js}',
     './_layouts/**/*.{html,js}',
     './_posts/**/*.{md,html}',
-    './recursos/**/*.{html,js}',
+    './_recursos/**/*.{html,js}',
+    './_proyecto/**/*.{html,js}',
+    './_comunidad/**/*.{html,js}',
+    './_contacto/**/*.{html,js}',
+    './_multimedia/**/*.{html,js}',
+    './blog/**/*.{html,md}',
     './assets/js/**/*.js',
     './*.{html,md}'
   ],
