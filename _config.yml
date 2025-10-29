@@ -1,8 +1,10 @@
-# Configuración general
+# ==========================================
+# 🌐 CONFIGURACIÓN GENERAL DEL SITIO
+# ==========================================
 title: "InitNullTV - Negocios digitales"
 description: "Guía práctica para emprender desde cero y crear negocios digitales reales en Latinoamérica, sin humo ni falsas promesas."
 url: "https://initnulltv.com"
-baseurl: "" 
+baseurl: ""
 language: "es"
 author: "InitNullTV"
 default_image: "/assets/img/og/initnulltv-og.jpg"
@@ -11,7 +13,9 @@ brand_color: "#007BFF"
 twitter_username: "@InitNullTV"
 timezone: "America/Lima"
 
-# Redes y enlaces
+# ==========================================
+# 🔗 ENLACES Y REDES SOCIALES
+# ==========================================
 links:
   youtube: "https://www.youtube.com/@InitNullTV"
   instagram: "https://instagram.com/initnulltv"
@@ -28,7 +32,9 @@ links:
   telegram_group: "https://t.me/+oD-3607T9iliOTM5"
   discord_group: "https://discord.gg/Jg6aGhcnU6"
 
-# Colecciones
+# ==========================================
+# 📁 COLECCIONES PERSONALIZADAS
+# ==========================================
 collections:
   proyecto:
     output: true
@@ -36,10 +42,14 @@ collections:
     output: true
   recursos:
     output: true
+  multimedia:
+    output: true
   contacto:
     output: true
 
-# Valores por defecto (layouts, imagenes, etc)
+# ==========================================
+# ⚙️ VALORES POR DEFECTO
+# ==========================================
 defaults:
   # Posts en _posts/
   - scope:
@@ -47,9 +57,10 @@ defaults:
       type: "posts"
     values:
       layout: post
+      feed: false
       image: "/assets/img/og/initnulltv-og.jpg"
 
-  # Colecciones
+  # Colecciones (todas las secciones personalizadas)
   - scope:
       path: "proyecto"
     values:
@@ -63,6 +74,10 @@ defaults:
     values:
       layout: section
   - scope:
+      path: "multimedia"
+    values:
+      layout: section
+  - scope:
       path: "contacto"
     values:
       layout: section
@@ -70,36 +85,58 @@ defaults:
   # Páginas generales
   - scope:
       path: ""
+      type: "pages"
     values:
       layout: page
       image: "/assets/img/og/initnulltv-og.jpg"
+      permalink: /:path/
 
-# Markdown y resaltador
+# ==========================================
+# ✍️ MARKDOWN Y ESTRUCTURA DE URL
+# ==========================================
 markdown: kramdown
 highlighter: rouge
-permalink: /blog/:title/
+permalink: /:title/
 
-# Plugins Jekyll 4.4.1
+# ==========================================
+# 🔌 PLUGINS (Jekyll 4.4.1)
+# ==========================================
 plugins:
   - jekyll-sitemap
-  - jekyll-feed
   - jekyll-seo-tag
   - jekyll-paginate
   - jekyll-minifier
   - jekyll-postcss-v2
 
-# Archivos y carpetas a excluir del build
+# ==========================================
+# 🚫 EXCLUSIONES DEL BUILD
+# ==========================================
 exclude:
   - vendor/
-  - "/recursos/los-3-pilares-de-tu-marca.html"
-  - "/recursos/video-script-idea-ia-pro.html"
+  - node_modules/
+  - .sass-cache/
+  - .jekyll-cache/
+  - .jekyll-metadata
+  - .bundle/
+  - Gemfile.lock~
 
-# Configuración de jekyll-postcss para Windows
+# ==========================================
+# 🧩 POSTCSS (Tailwind / NPM)
+# ==========================================
 postcss:
   executable: ./node_modules/.bin/postcss.cmd
   script: node_modules/.bin/postcss
   config: postcss.config.js
 
-# Paginación de blog
+# ==========================================
+# 📚 PAGINACIÓN DEL BLOG
+# ==========================================
 paginate: 6
 paginate_path: "/blog/page:num"
+
+# ==========================================
+# 🧭 CONFIGURACIÓN DE PLUGINS XML
+# ==========================================
+sitemap:
+  filename: sitemap.xml
+  
