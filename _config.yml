@@ -88,14 +88,14 @@ defaults:
     values:
       layout: page
       image: "/assets/img/og/initnulltv-og.jpg"
-      permalink: /:path
+      permalink: /:path/
 
 # ==========================================
 # ✍️ MARKDOWN Y ESTRUCTURA DE URL
 # ==========================================
 markdown: kramdown
 highlighter: rouge
-permalink: /:title
+permalink: /:title/
 
 # ==========================================
 # 🔌 PLUGINS (Jekyll 4.4.1)
