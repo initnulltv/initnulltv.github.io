@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "Condiciones Generales"
-permalink: /terminos-condiciones
+permalink: /terminos-condiciones/
 sitemap: false
 ---
 

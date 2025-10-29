@@ -5,4 +5,5 @@ description: "Guía práctica para emprender desde cero y crear negocios digital
 tags: [emprendimiento digital, negocios online, emprender desde cero, principiantes latam, libertad financiera, automatización, herramientas digitales]
 image: "/assets/img/og/initnulltv-og.jpg"
 sitemap: false
+permalink: /
 ---
