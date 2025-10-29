@@ -1,64 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Orbitron:wght@400;700&family=Roboto:wght@400;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 /* -------------------------------------- */
-/* 1. FONT-FACES (No necesitan cambios)    */
-/* -------------------------------------- */
-
-@font-face {
-    font-family: 'Roboto';
-    src: url('../fonts/roboto-regular.woff2') format('woff2'),
-         url('../fonts/roboto-regular.woff') format('woff');
-    font-weight: 400;
-    font-style: normal;
-    font-display: swap; 
-}
-@font-face {
-    font-family: 'Roboto';
-    src: url('../fonts/roboto-bold.woff2') format('woff2'),
-         url('../fonts/roboto-bold.woff') format('woff');
-    font-weight: 700; 
-    font-style: normal;
-    font-display: swap; 
-}
-
-@font-face {
-    font-family: 'Orbitron';
-    src: url('../fonts/orbitron-regular.woff2') format('woff2'),
-         url('../fonts/orbitron-regular.woff') format('woff');
-    font-weight: 400;
-    font-style: normal;
-    font-display: swap; 
-}
-@font-face {
-    font-family: 'Orbitron';
-    src: url('../fonts/orbitron-bold.woff2') format('woff2'),
-         url('../fonts/orbitron-bold.woff') format('woff');
-    font-weight: 700;
-    font-style: normal;
-    font-display: swap; 
-}
-
-@font-face {
-    font-family: 'Montserrat';
-    src: url('../fonts/montserrat-regular.woff2') format('woff2'),
-         url('../fonts/montserrat-regular.woff') format('woff');
-    font-weight: 400;
-    font-style: normal;
-    font-display: swap; 
-}
-@font-face {
-    font-family: 'Montserrat';
-    src: url('../fonts/montserrat-bold.woff2') format('woff2'),
-         url('../fonts/montserrat-bold.woff') format('woff');
-    font-weight: 700;
-    font-style: normal;
-    font-display: swap; 
-}
-
-/* -------------------------------------- */
-/* 2. VARIABLES DE MARCA (:root)          */
+/* 1. VARIABLES DE MARCA (:root)          */
 /* -------------------------------------- */
 
 :root {
@@ -74,14 +21,14 @@
   --rgb-verde-neon: 0, 255, 153;
   --rgb-morado-neon: 157, 78, 221;
   
-  --font-base: 'Roboto';
-  --font-titulos: 'Orbitron';
-  --font-subtitulo: 'Montserrat';
+  --font-base: 'Roboto', sans-serif;
+  --font-titulos: 'Orbitron', sans-serif;
+  --font-subtitulo: 'Montserrat', sans-serif;
   --font-code: "Fira Code", "Roboto Mono", monospace;
 }
 
 /* -------------------------------------- */
-/* 3. ESTILOS BASE (@layer base)          */
+/* 2. ESTILOS BASE (@layer base)          */
 /* -------------------------------------- */
 
 @layer base {
@@ -90,21 +37,20 @@
     background-color: var(--color-fondo-claro);
     color: var(--color-texto-principal);
     line-height: 1.6;
-    /* Aplicando el reset de márgenes y padding que solicitaste */
     margin: 0;
     padding: 0;
   }
 
   p { margin-bottom: 1.5rem; }
 
-  /* SOLUCIÓN AL ERROR DE API OBSOLETA: Definir tamaños de fuente explícitos */
+  /* Corregido el error de API obsoleta y estandarizado con unidades REM */
   h1 {
     font-family: var(--font-titulos);
     margin-top: 2.5rem;
     margin-bottom: 1.5rem;
     line-height: 1.1; 
     font-weight: 700;
-    font-size: 3rem; /* Equivalente a text-5xl */
+    font-size: 3rem;
   }
   
   h2 {
@@ -155,7 +101,6 @@
   /* Clases de texto y gradientes */
   .subtitle { 
     font-family: var(--font-subtitulo); 
-    /* Le añadimos un tamaño por defecto para mejorar el uso como subtítulo */
     font-size: 1.25rem; 
     font-weight: 400;
   }
@@ -163,7 +108,6 @@
   .text-morado-neon { color: var(--color-morado-neon); }
   .text-verde-neon { color: var(--color-verde-neon); }
   
-  /* Corregir el error de text-fill-color */
   .brand-gradient-text-404 {
     background: linear-gradient(90deg, var(--color-turquesa), var(--color-morado-neon));
     -webkit-background-clip: text;
@@ -214,123 +158,10 @@
 }
 
 /* -------------------------------------- */
-/* 4. COMPONENTES (@layer components)     */
+/* 3. COMPONENTES (@layer components)     */
 /* -------------------------------------- */
 
 @layer components {
-  /* CTA Principal: Verde Neón */
-  .cta-neon-green {
-    background-color: var(--color-verde-neon);
-    color: var(--color-negro-profundo);
-    font-family: var(--font-titulos);
-    font-weight: 700;
-    padding: 0.75rem 1.5rem;
-    border-radius: 0.5rem;
-    box-shadow: 0 0 10px var(--color-verde-neon), 0 0 20px rgba(0, 255, 153, 0.5);
-    transition: all 0.3s ease-in-out;
-  }
-
-  .cta-neon-green:hover {
-    box-shadow: 0 0 15px var(--color-verde-neon), 0 0 30px rgba(0, 255, 153, 0.7);
-    transform: translateY(-2px);
-  }
-
-  /* CTA Secundaria: Morado Neón */
-  .cta-secondary-purple {
-    background-color: transparent;
-    color: var(--color-morado-neon);
-    border: 2px solid var(--color-morado-neon);
-    font-family: var(--font-subtitulo);
-    padding: 0.75rem 1.5rem;
-    border-radius: 0.5rem;
-    transition: all 0.3s ease-in-out;
-  }
-
-  .cta-secondary-purple:hover {
-    background-color: var(--color-morado-neon);
-    color: var(--color-negro-profundo);
-  }
-
-  /* ADMONITION TIP (Soluciones o Consejos) */
-  .admonition-tip {
-    padding: 1rem 1.5rem;
-    margin: 1.5rem 0;
-    border-left: 5px solid var(--color-turquesa);
-    background-color: rgba(0, 123, 255, 0.1); /* Fondo Turquesa semitransparente */
-    border-radius: 0.25rem;
-    color: var(--color-gris-claro); /* Texto gris claro (para modo oscuro) */
-  }
-
-  .admonition-tip strong {
-    color: var(--color-turquesa);
-    font-family: var(--font-titulos);
-    font-weight: 700;
-  }
-
-  /* ADMONITION WARNING (Errores o Advertencias) */
-  .admonition-warning {
-    padding: 1rem 1.5rem;
-    margin: 1.5rem 0;
-    border-left: 5px solid var(--color-morado-neon);
-    background-color: rgba(157, 78, 221, 0.1); /* Fondo Morado semitransparente */
-    border-radius: 0.25rem;
-    color: var(--color-gris-claro);
-  }
-
-  .admonition-warning strong {
-    color: var(--color-morado-neon);
-    font-family: var(--font-titulos);
-    font-weight: 700;
-  }
-
-  /* ENLACES DEL FOOTER */
-  .footer-links {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.125rem; /* Reducido aún más */
-  }
-
-  .footer-links li {
-    display: flex;
-    align-items: center;
-  }
-
-  .footer-links li a {
-    color: var(--color-gris-claro);
-    opacity: 0.7;
-    padding: 0.125rem 0.25rem;
-    border-radius: 3px;
-    transition: all 0.3s ease;
-    text-decoration: none;
-    font-size: 0.75rem;
-    white-space: nowrap;
-  }
-
-  .footer-links li a:hover {
-    opacity: 1;
-    color: var(--color-turquesa);
-    background-color: rgba(0, 123, 255, 0.1);
-    transform: translateY(-1px);
-  }
-
-  .footer-links li::after {
-    content: '•';
-    margin: 0 0.125rem;
-    color: var(--color-morado-neon);
-    opacity: 0.3;
-    font-size: 0.625rem;
-  }
-
-  .footer-links li:last-child::after {
-    display: none;
-  }
-}
-
-/* =========================================================
-   CAPA DE COMPONENTES
-   ========================================================= */
-@layer components {
-
   /* VIDEO RESPONSIVE */
   .video-responsive {
     position: relative;
@@ -487,11 +318,53 @@
     .carousel-nav-btn { display: none; }
   }
 
+  /* ENLACES DEL FOOTER */
+  .footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.125rem;
+  }
+
+  .footer-links li {
+    display: flex;
+    align-items: center;
+  }
+
+  .footer-links li a {
+    color: var(--color-gris-claro);
+    opacity: 0.7;
+    padding: 0.125rem 0.25rem;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    font-size: 0.75rem;
+    white-space: nowrap;
+  }
+
+  .footer-links li a:hover {
+    opacity: 1;
+    color: var(--color-turquesa);
+    background-color: rgba(0, 123, 255, 0.1);
+    transform: translateY(-1px);
+  }
+
+  .footer-links li::after {
+    content: '•';
+    margin: 0 0.125rem;
+    color: var(--color-morado-neon);
+    opacity: 0.3;
+    font-size: 0.625rem;
+  }
+
+  .footer-links li:last-child::after {
+    display: none;
+  }
 }
 
-/* =========================================================
-   CAPA DE UTILIDADES
-   ========================================================= */
+/* -------------------------------------- */
+/* 4. UTILIDADES (@layer utilities)       */
+/* -------------------------------------- */
+
 @layer utilities {
   .prose-invert { color: #fff !important; }
 
@@ -526,7 +399,7 @@
 }
 
 /* -------------------------------------- */
-/* 5. NAVEGACIÓN SECUNDARIA (Footer)     */
+/* 5. NAVEGACIÓN SECUNDARIA               */
 /* -------------------------------------- */
 
 nav[aria-label="Navegación secundaria"] {
