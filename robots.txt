@@ -16,4 +16,5 @@ Disallow: /.jekyll-cache/
 Disallow: /.sass-cache/
 Disallow: /vendor/
 Disallow: /.git/
+Disallow: /gracias/
 Sitemap: https://initnulltv.com/sitemap.xml

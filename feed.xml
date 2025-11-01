@@ -20,7 +20,7 @@ permalink: /feed.xml
       <description><![CDATA[{{ post.excerpt | strip_html | truncate: 200 }}]]></description>
       {%- endif -%}
       {%- if post.image -%}
-      <enclosure url="{{ site.url }}{{ post.image }}" type="image/jpeg" />
+      <enclosure url="{{ site.url }}{{ post.image }}" length="0" type="image/jpeg" />
       {%- endif -%}
     </item>
     {%- endfor -%}

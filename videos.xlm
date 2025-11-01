@@ -1,0 +1,24 @@
+---
+layout: none
+permalink: /videos.xml
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+
+{% for video in site.data.videos %}
+  <url>
+    <loc>{{ video.loc | xml_escape }}</loc>
+    
+    <video:video>
+      <video:thumbnail_loc>{{ video.thumbnail_loc | xml_escape }}</video:thumbnail_loc>
+      <video:title>{{ video.titulo | xml_escape }}</video:title>
+      <video:description>{{ video.description | xml_escape }}</video:description>
+      <video:content_loc>{{ video.content_loc | xml_escape }}</video:content_loc>
+      <video:player_loc allow_embed="yes">{{ video.player_loc | xml_escape }}</video:player_loc>
+      <video:duration>{{ video.duration }}</video:duration>
+      </video:video>
+  </url>
+{% endfor %}
+
+</urlset>

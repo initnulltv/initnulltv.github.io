@@ -1,20 +1,30 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    {% include head.html %}
-  </head>
+ <head>
+  {% include head.html %}
+ </head>
 
-  <body class="bg-[#0D0D0D] text-white font-sans">
-    {% include header.html %}
-    
-    <main>
-      {{ content }}
-    </main>
+ <body class="bg-[#0D0D0D] text-white font-sans">
+  {% include header.html %}
+  
+  <main>
+   {{ content }}
+  </main>
 
-    {% include footer.html %}
+  {% include footer.html %}
 
-<script src="{{ '/assets/js/main.js' | absolute_url }}" defer></script>
+    <script src="{{ '/assets/js/main.js' | absolute_url }}" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script> <script>
+    function loadScript(a){
+    var b=document.getElementsByTagName("head")[0],c=document.createElement("script");
+    c.type="text/javascript";
+    c.src="https://tracker.metricool.com/resources/be.js";
+    c.onreadystatechange=a;
+    c.onload=a;
+    b.appendChild(c);
+    }
+    loadScript(function(){beTracker.t({hash:"e8bdd9b6369b9ab98ff479f19247b81d"});});
+    </script>
 
-</body>
+ </body>
 </html>
-
