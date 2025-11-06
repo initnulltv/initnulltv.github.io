@@ -3,7 +3,7 @@ layout: post
 title: "Negocios digitales: Guía para empezar de cero"
 excerpt: "Descubre qué son los negocios digitales, cómo empezar desde cero y los 10 modelos más recomendables para principiantes."
 date: 2025-10-25 00:00:00 -0500
-tags: [negocios digitales, iniciación, emprendimiento, InitNullTV, guía práctica, modelos de negocio]
+tags: [negocios digitales, guia para empezar de cero, emprendimiento, InitNullTV, guía práctica, modelos de negocio]
 image: /assets/img/posts/negocios-digitales-empezar.png
 ---
 

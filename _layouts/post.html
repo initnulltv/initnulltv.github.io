@@ -79,4 +79,42 @@
  }
  </script>
 </body>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "{{ page.url | absolute_url }}"
+  },
+  "headline": "{{ page.title | escape }}",
+  "description": "{% if page.description %}{{ page.description | strip_html | normalize_whitespace | truncate: 300 | escape }}{% else %}{{ page.excerpt | strip_html | normalize_whitespace | truncate: 300 | escape }}{% endif %}",
+  "image": {
+    "@type": "ImageObject",
+    "url": "{{ page.image | absolute_url | default: site.logo }}"
+  },
+  "author": {
+    "@type": "Person",
+    "name": "{{ site.author }}",
+    "url": "{{ site.url }}"
+  },
+  "publisher": {
+    "@type: "Organization",
+    "name": "{{ site.author }}",
+    "logo": {
+      "@type: "ImageObject",
+      "url": "{{ site.logo | absolute_url }}"
+    }
+  },
+  "datePublished": "{{ page.date | date_to_xmlschema }}",
+  "dateModified": "{{ page.last_modified_at | default: page.date | date_to_xmlschema }}",
+  "about": [
+    {% for tag in page.tags %}
+      "{{ tag }}"{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  ]
+}
+</script>
+
 </html>

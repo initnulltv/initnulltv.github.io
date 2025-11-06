@@ -3,7 +3,7 @@ layout: post
 title: "Mi primera vez en los negocios digitales"
 excerpt: "El inicio de todo: cómo fue publicar mi primer video en YouTube, los errores, el miedo y las lecciones reales detrás de ese primer paso."
 date: 2025-10-16 00:00:00 -0500
-tags: [primer video, negocios digitales, InitNullTV, emprendimiento, comienzos, sin dinero]
+tags: [primer video, negocios digitales, InitNullTV, emprendimiento, comienzos, sin dinero, latam]
 image: /assets/img/posts/mi-primera-vez-negocios-digitales.png
 ---
 

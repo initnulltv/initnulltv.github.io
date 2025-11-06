@@ -4,3 +4,33 @@ layout: default
 <article class="page">
   {{ content }}
 </article>
+
+{% if page.schema_type == 'Person' %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "{{ site.author }}",
+  "url": "{{ page.url | absolute_url }}",
+  "image": "{{ site.logo | absolute_url }}",
+  "sameAs": [
+    "{{ site.links.linkedin }}"
+  ],
+  "jobTitle": "Fundador de InitNullTV",
+  "worksFor": {
+    "@type": "Organization",
+    "name": "InitNullTV"
+  },
+  "knowsAbout": [
+    "Emprendimiento Digital",
+    "Negocios Online desde Cero",
+    "Creación de Contenido",
+    "Marketing para Principiantes",
+    "Independencia Económica",
+    "Productividad",
+    "Negocios digitales",
+    "Herramientas Digitales"
+  ]
+}
+</script>
+{% endif %}

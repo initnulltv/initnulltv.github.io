@@ -3,7 +3,7 @@ layout: post
 title: "10/10 - Cómo nació mi negocio digital desde cero"
 excerpt: "El 10/10 marca el inicio de mi aventura digital: cómo nació InitNullTV y mi primer negocio online desde cero."
 date: 2025-10-10 00:00:00 -0500
-tags: [initnulltv, negocio digital, emprendimiento, historia, aprendizaje]
+tags: [initnulltv, negocio digital, emprendimiento, historia, aprendizaje, como nace]
 image: /assets/img/posts/hoy-10-10-nace-initnulltv.png
 ---
 

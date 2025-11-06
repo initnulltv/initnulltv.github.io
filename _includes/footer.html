@@ -2,104 +2,150 @@
   <div class="container mx-auto px-4 sm:px-6 lg:px-8">
     <div class="border-t border-morado-neon/40 mb-6"></div>
 
-    <div class="flex flex-col md:flex-row justify-between items-center text-xs gap-y-3">
-      <p class="text-sm text-slate-500 text-center md:text-left">
+    <!-- Estructura de tres columnas -->
+    <div class="flex flex-col md:flex-row justify-between items-center md:items-start text-sm">
+
+      <!-- Columna izquierda: logo y derechos -->
+      <div class="text-center md:text-left mb-6 md:mb-0">
         <a href="{{ '/' | relative_url }}" class="text-4xl font-bold font-titulos brand-gradient-text block mb-2">
           InitNullTV
         </a>
-        &copy; {{ site.time | date: '%Y' }} InitNullTV. Todos los derechos reservados.
-      </p>
+        <p class="text-slate-500">
+          &copy; {{ site.time | date: '%Y' }} InitNullTV. Todos los derechos reservados.
+        </p>
+      </div>
 
-      <div class="flex flex-col items-center md:items-end text-right">
-        <nav aria-label="Navegación secundaria">
-          <ul class="flex flex-wrap justify-center md:justify-end gap-x-0.5 gap-y-0.5 mb-2 footer-links">
-            <!-- Enlaces principales -->
+      <!-- Columna central: botón PayPal -->
+      <div class="flex justify-center mb-6 md:mb-0">
+        <style>
+          .pp-VG7TJBAMM48XE {
+              text-align: center;
+              border: none;
+              border-radius: 0.5rem;
+              min-width: 11.625rem;
+              padding: 0 2rem;
+              height: 2.8rem;
+              font-weight: bold;
+              background-color: #FFC439;
+              color: #111827;
+              font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+              font-size: 1rem;
+              line-height: 1.25rem;
+              cursor: pointer;
+              transition: background-color 0.2s;
+              display: inline-block; 
+          }
+          .pp-VG7TJBAMM48XE:hover {
+              background-color: #e5b22b;
+          }
+        </style>
+
+        <form action="https://www.paypal.com/ncp/payment/VG7TJBAMM48XE" method="post" target="_blank">
+          <input class="pp-VG7TJBAMM48XE" type="submit" value="Invitar un café" />
+        </form>
+      </div>
+
+      <!-- Columna derecha: enlaces -->
+      <div class="text-center md:text-right text-xs">
+        <nav aria-label="Navegación secundaria" class="mb-2">
+          <ul class="flex flex-wrap justify-center md:justify-end gap-x-2 gap-y-1 footer-links">
             <li><a href="{{ '/aviso-legal/' | relative_url }}">Legal</a></li>
             <li><a href="{{ '/politica-privacidad/' | relative_url }}">Privacidad</a></li>
             <li><a href="{{ '/politica-cookies/' | relative_url }}">Cookies</a></li>
             <li><a href="{{ '/terminos-condiciones/' | relative_url }}">Términos</a></li>
           </ul>
-          
-          <ul class="flex flex-wrap justify-center md:justify-end gap-x-0.5 gap-y-0.5 footer-links mt-1">
-            <!-- Enlaces secundarios -->
+          <ul class="flex flex-wrap justify-center md:justify-end gap-x-2 gap-y-1 footer-links">
             <li><a href="{{ '/index.xml' | relative_url }}">Sitemap</a></li>
             <li><a href="{{ '/feed.xml' | relative_url }}">RSS Post</a></li>
             <li><a href="https://www.youtube.com/feeds/videos.xml?channel_id=UCFQ7JSFzeTLE63luE0P-iIQ">RSS Videos</a></li>
             <li><a href="https://mailchi.mp/3a103c39b932/suscribir">Suscribir</a></li>
           </ul>
         </nav>
-
-        <p class="text-xs text-slate-600">
+        <p class="text-slate-600">
           Este sitio es parte del proyecto educativo documental de InitNullTV.
         </p>
       </div>
     </div>
   </div>
 
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "{{ site.author }}",
-  "url": "{{ site.url }}",
-  "logo": "{{ site.logo | absolute_url }}",
-  "sameAs": [
-    "{{ site.links.youtube }}",
-    "{{ site.links.instagram }}",
-    "{{ site.links.tiktok }}",
-    "{{ site.links.twitter }}",
-    "{{ site.links.whatsapp_channel }}",
-    "{{ site.links.telegram_channel }}",
-    "{{ site.links.linkedin }}",
-    "{{ site.links.linkedin_company }}"
-  ]
-}
-</script>
+  <!-- Schema.org JSON-LD -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "{{ site.author }}",
+      "url": "{{ site.url }}",
+      "logo": "{{ site.logo | absolute_url }}",
+      "sameAs": [
+        "{{ site.links.youtube }}",
+        "{{ site.links.instagram }}",
+        "{{ site.links.tiktok }}",
+        "{{ site.links.twitter }}",
+        "{{ site.links.whatsapp_channel }}",
+        "{{ site.links.telegram_channel }}",
+        "{{ site.links.linkedin }}",
+        "{{ site.links.linkedin_company }}"
+      ]
+    }
+  </script>
 
-{% if page.url == "/" %}
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  "name": "{{ site.title }}",
-  "url": "{{ site.url }}",
-  "description": "{{ site.description }}",
-  "publisher": {
-    "@type": "Organization",
-    "name": "{{ site.author }}",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "{{ site.logo | absolute_url }}"
+  {% if page.url == "/" %}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "{{ site.title }}",
+    "url": "{{ site.url }}",
+    "description": "{{ site.description }}",
+    "publisher": {
+      "@type": "Organization",
+      "name": "{{ site.author }}",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "{{ site.logo | absolute_url }}"
+      }
     }
   }
-}
-</script>
-{% endif %}
+  </script>
+  {% endif %}
 
-{% if page.url != "/" %}
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "name": "Navegación del sitio InitNullTV",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "{{ site.title }}",
-      "item": "{{ site.url }}"
-    },
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "{% if page.collection %}{{ page.collection | capitalize }}{% else %}{{ page.title }}{% endif %}",
-      "item": "{{ page.url | absolute_url }}"
+  {% if page.url != "/" %}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "name": "Navegación del sitio InitNullTV",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "{{ site.title }}",
+        "item": "{{ site.url }}"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "{% if page.collection %}{{ page.collection | capitalize }}{% else %}{{ page.title }}{% endif %}",
+        "item": "{{ page.url | absolute_url }}"
+      }
+    ]
+  }
+  </script>
+  {% endif %}
+
+  <!-- Métricas -->
+  <script>
+    function loadScript(a){
+      var b=document.getElementsByTagName("head")[0],
+          c=document.createElement("script");
+      c.type="text/javascript",
+      c.src="https://tracker.metricool.com/resources/be.js",
+      c.onreadystatechange=a,
+      c.onload=a,
+      b.appendChild(c)
     }
-  ]
-}
-</script>
-{% endif %}
-
-<script>function loadScript(a){var b=document.getElementsByTagName("head")[0],c=document.createElement("script");c.type="text/javascript",c.src="https://tracker.metricool.com/resources/be.js",c.onreadystatechange=a,c.onload=a,b.appendChild(c)}loadScript(function(){beTracker.t({hash:"e8bdd9b6369b9ab98ff479f19247b81d"})});</script>
-
+    loadScript(function(){
+      beTracker.t({hash:"e8bdd9b6369b9ab98ff479f19247b81d"})
+    });
+  </script>
 </footer>

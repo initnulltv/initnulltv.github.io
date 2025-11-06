@@ -3,7 +3,7 @@ layout: post
 title: "Cómo hacer un documental"
 excerpt: "Inicio del proceso real de crear un documental desde cero: aprendizajes, guía y mentoría."
 date: 2025-10-27 00:00:00 -0500
-tags: [documental, storytelling, emprendimiento, InitNullTV, viaje del héroe, aprendizaje]
+tags: [documental, storytelling, emprendimiento, InitNullTV, viaje del héroe, aprendizaje, como hacer un documental]
 image: /assets/img/posts/como-hacer-un-documental.jpg
 ---
 
